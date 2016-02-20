@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="c0fef95d-59b9-4c8e-8605-5c32f648b0ee" name="GestionEncre" linkedPackageId="536f6f82-5204-4fa0-bb43-577d34b6d557" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="88616fb1-e67d-4446-990c-c3db277a3ec4">
+      <profileInstance Id="b618a743-bfb3-42b0-9529-2693b7f84703" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="d1bc823e-36b9-44d1-b4b2-f3975dfe318f">
+      <profileInstance Id="e323e716-e7ed-4250-b80a-f9d9cf67438a" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6bff4e48-aaeb-4a72-952e-66b5f7594b3e" name="XamlInkRenderer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5039d64c-2d72-4b81-b776-3bcfc97c6542" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="536f6f82-5204-4fa0-bb43-577d34b6d557" name="NineModeling">
+    <elementDefinition Id="9c5cd0fc-c238-4907-8a9b-30f9bd4ae155" />
+  </package>
+</logicalClassDesignerModel>

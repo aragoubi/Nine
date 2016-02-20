@@ -1,0 +1,227 @@
+﻿<Page x:Class="Nine.Views.Pages.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      xmlns:Controls="clr-namespace:Nine.Views.Controls"
+      xmlns:RadialMenu="clr-namespace:RadialMenu.Controls;assembly=RadialMenu"
+      xmlns:MahApps="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+      PreviewTouchDown="Page_PreviewTouchDown"
+      Loaded="Page_Loaded">
+
+    <Page.Resources>
+        <!-- Right SideBar -->
+        <Style x:Key="BottomSideBar" TargetType="Grid">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding DataContext.IsFullscreenMode, ElementName=LayerStack}" Value="True">
+
+                    <!-- FullScreen Openning -->
+                    <DataTrigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Height">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.75" KeySpline="0.25,1,0.05,1" Value="0" />
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.EnterActions>
+
+                    <!-- FullScreen Closing -->
+                    <DataTrigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Height">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.75" KeySpline="0.25,1,0.05,1" Value="60" />
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.ExitActions>
+
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Left SideBar -->
+        <Style x:Key="LeftSideBar" TargetType="Grid">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding DataContext.IsFullscreenMode, ElementName=LayerStack}" Value="True">
+
+                    <!-- FullScreen Openning -->
+                    <DataTrigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Width">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.75" KeySpline="0.25,1,0.05,1" Value="0" />
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.EnterActions>
+
+                    <!-- FullScreen Closing -->
+                    <DataTrigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Width">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.75" KeySpline="0.25,1,0.05,1" Value="200" />
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.ExitActions>
+
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Page.Resources>
+
+    <DockPanel Background="{StaticResource SideBarBackgroundBrush}">
+
+        <!-- Bottom AppBar -->
+        <Grid
+            DockPanel.Dock="Bottom">
+            <Controls:AppBar
+                x:Name="AppBar"
+                Height="0"
+                DataContext="{Binding DataContext.LayerStack.AppBarState, ElementName=LessonPage}"
+                Tag="{Binding DataContext.LayerStack, ElementName=LessonPage}" />
+        </Grid>
+
+        <!-- Bottom SideBar -->
+        <Grid
+            DockPanel.Dock="Bottom"
+            Height="60"
+            Style="{StaticResource BottomSideBar}">
+            <Controls:BottomSideBar
+                x:Name="BottomSideBar"
+                DataContext="{Binding DataContext.LayerStack, ElementName=LessonPage}" />
+        </Grid>
+
+        <!-- Bottom SideBar -->
+
+        <DockPanel DockPanel.Dock="Top">
+
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="PreviewTouchDown">
+                    <i:InvokeCommandAction Command="{Binding DataContext.Close, ElementName=AppBar}" />
+                </i:EventTrigger>
+                <i:EventTrigger EventName="PreviewMouseDown">
+                    <i:InvokeCommandAction Command="{Binding DataContext.Close, ElementName=AppBar}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+
+          
+
+
+            <!-- Left Sidebar -->
+            <Grid
+                DockPanel.Dock="Left"
+                Width="200"
+                Style="{StaticResource LeftSideBar}">
+                <Controls:SideBar
+                    x:Name="LessonSidebar"
+                    DataContext="{Binding DataContext, ElementName=LessonPage}" />
+            </Grid>
+
+            <!-- MainContent -->
+            
+            <!--<Grid DockPanel.Dock="Top">
+                <Controls:Test />
+            </Grid>  -->
+            
+            <Grid
+                DockPanel.Dock="Right"
+                TouchUp="LessonContainer_TouchUp"
+                ManipulationDelta="LessonContainer_ManipulationDelta"
+                Background="{StaticResource ContentBackgroundBrush}">
+               
+
+                <Canvas Panel.ZIndex="10" ClipToBounds="True">
+
+                    <!-- RadialMenu -->
+                    <Controls:RadialMenus
+                        x:Name="RadialMenu"
+                        Panel.ZIndex="10"
+                        DataContext="{Binding DataContext, ElementName=LayerStack}"
+                        Canvas.Left="{Binding RadialMenuState.LeftPosition}"
+                        Canvas.Top="{Binding RadialMenuState.TopPosition}" />
+
+                    <!-- RadialMenu "State" Button -->
+                    <Controls:RadialMenuStateButton
+                        x:Name="RadialMenuOpenButton"
+                        Tag="{Binding ElementName=LessonContainer}"
+                        Panel.ZIndex="0"
+                        DataContext="{Binding DataContext, ElementName=LayerStack}"
+                        Canvas.Top="140"
+                        Canvas.Right="155" />
+
+                </Canvas>
+
+                <!-- ScrollViewer -->
+                <Controls:TouchScrollViewer
+                    x:Name="LessonContainer"
+                    Panel.ZIndex="0"
+                    IsContentManipulationEnabled="True"
+                    Loaded="LessonContainer_Loaded"
+                    HorizontalOffset="{Binding DataContext.Viewport.HorizontalOffset, ElementName=LayerStack, Mode=TwoWay}"
+                    VerticalOffset="{Binding DataContext.Viewport.VerticalOffset, ElementName=LayerStack, Mode=TwoWay}">
+
+                    <Grid
+                        x:Name="LessonContent"
+                        MouseRightButtonUp="LessonContent_MouseRightButtonUp"
+                        TouchDown="LessonContainer_TouchDown"
+                        TouchMove="LessonContainer_TouchMove"
+                        StylusDown="LessonContainer_StylusDown"
+                        PreviewMouseDown="LessonContent_PreviewMouseDown"
+                        PreviewTouchDown="LessonContent_PreviewTouchDown"
+                        Stylus.IsFlicksEnabled="False"
+                        Stylus.IsPressAndHoldEnabled="False"
+                        Stylus.IsTapFeedbackEnabled="False"
+                        Stylus.IsTouchFeedbackEnabled="False">
+
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="PreviewTouchDown">
+                                <i:InvokeCommandAction
+                                    Command="{Binding DataContext.CloseRadialMenu, ElementName=LayerStack}" />
+                            </i:EventTrigger>
+                            <i:EventTrigger EventName="PreviewMouseDown">
+                                <i:InvokeCommandAction
+                                    Command="{Binding DataContext.CloseRadialMenu, ElementName=LayerStack}" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+
+                        <!-- Lesson scale -->
+                        <Grid.LayoutTransform>
+                            <ScaleTransform
+                                ScaleX="{Binding DataContext.Viewport.Scale, ElementName=LayerStack}"
+                                ScaleY="{Binding DataContext.Viewport.Scale, ElementName=LayerStack}" />
+                        </Grid.LayoutTransform>
+
+                        <!-- Drawing bound -->
+                        <Controls:DrawingAreaBackground
+                            x:Name="DrawingAreaBound"
+                            Panel.ZIndex="0"
+                            Width="2800"
+                            Height="2000" />
+
+                        <!-- Current lesson page (pdf) -->
+                        <Controls:Lesson
+                            x:Name="LessonPage"
+                            Panel.ZIndex="5"
+                            Margin="0 0 600 600" />
+
+                        <!-- Layer Stack -->
+                        <Controls:LayerStack
+                            x:Name="LayerStack"
+                            Panel.ZIndex="10"
+                            DataContext="{Binding DataContext.LayerStack, ElementName=LessonPage}"
+                            Width="{Binding Width, ElementName=DrawingAreaBound}"
+                            Height="{Binding Height, ElementName=DrawingAreaBound}" />
+
+                    </Grid>
+                </Controls:TouchScrollViewer>
+
+            </Grid>
+
+        </DockPanel>
+
+    </DockPanel>
+
+</Page>

@@ -1,0 +1,183 @@
+﻿<UserControl x:Class="Nine.Views.Controls.LayerContainer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Draggable="clr-namespace:Nine.Layers.Components.Draggables;assembly=NineModels"
+             xmlns:Controls="clr-namespace:Nine.Views.Controls"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="300"
+             Loaded="LayerContainer_Loaded">
+
+    <!--  InkCanvas with cross-shared CurrentState.EditingMode, DrawingAttributes, etc, through the parent ItemsControl (DataContext of LayerStack) -->
+    <Canvas Grid.Row="0" Grid.Column="0" x:Name="Container">
+
+        <!-- Chart Components -->
+        <ItemsControl x:Name="ChartComponents" ItemsSource="{Binding Charts}" Loaded="ChartComponents_Loaded">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Canvas />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemContainerStyle>
+                <Style>
+                    <Setter Property="Canvas.Left" Value="{Binding X}" />
+                    <Setter Property="Canvas.Top" Value="{Binding Y}" />
+                </Style>
+            </ItemsControl.ItemContainerStyle>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Controls:BarChart DataContext="{Binding}"
+                                       Visibility="{Binding IsAnswered, Converter={StaticResource BooleanToVisibility}}" />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+        <!-- SaliencyMap Components -->
+        <ItemsControl x:Name="SaliencyMapComponents" ItemsSource="{Binding SaliencyMaps}" Opacity="0.7">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="{Binding Source}"
+                           Visibility="{Binding IsAnswered, Converter={StaticResource BooleanToVisibility}}" />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+        <!-- InkCanvas -->
+        <Controls:Layer
+            ResizeEnabled="True"
+            MoveEnabled="True"
+            x:Name="InkLayer"
+            Tag="{Binding DataContext, RelativeSource={RelativeSource AncestorType=Controls:LayerStack}}"
+            Gesture="InkLayer_Gesture"
+            SelectionChanged="InkLayer_SelectionChanged"
+            SelectionMoved="InkLayer_SelectionChanged"
+            SelectionResized="InkLayer_SelectionChanged"
+            Background="Transparent"> <!--Cursor="Arrow" UseCustomCursor="True">-->
+
+            <!-- Width of InkCanvas = Width of LayerStack -->
+            <InkCanvas.IsEnabled>
+                <Binding Path="IsInkable" />
+            </InkCanvas.IsEnabled>
+
+            <!-- Width of InkCanvas = Width of LayerStack -->
+            <InkCanvas.Width>
+                <Binding Path="ActualWidth" RelativeSource="{RelativeSource AncestorType=Controls:LayerStack}" />
+            </InkCanvas.Width>
+
+            <!-- Height of InkCanvas = Height of LayerStack -->
+            <InkCanvas.Height>
+                <Binding Path="ActualHeight" RelativeSource="{RelativeSource AncestorType=Controls:LayerStack}" />
+            </InkCanvas.Height>
+
+            <!-- Shared DrawingAttributes -->
+            <InkCanvas.DefaultDrawingAttributes>
+                <Binding Path="Tag.DrawingAttributes" RelativeSource="{RelativeSource Self}" />
+            </InkCanvas.DefaultDrawingAttributes>
+
+            <!-- Shared CurrentState.EditingMode -->
+            <InkCanvas.EditingMode>
+                <Binding Path="Tag.CurrentState.EditingMode" RelativeSource="{RelativeSource Self}" />
+            </InkCanvas.EditingMode>
+
+            <!-- Shared EraserShape -->
+            <Controls:Layer.EraserShape>
+                <Binding Path="Tag.EraserShape" RelativeSource="{RelativeSource Self}" />
+            </Controls:Layer.EraserShape>
+
+        </Controls:Layer>
+
+        <!-- Other Draggable Components -->
+        <ItemsControl x:Name="DraggableComponents" ItemsSource="{Binding DraggableComponents}"
+                      Loaded="DraggableComponents_Loaded">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Canvas />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemContainerStyle>
+                <Style>
+                    <Setter Property="Canvas.Left" Value="{Binding Position.X}" />
+                    <Setter Property="Canvas.Top" Value="{Binding Position.Y}" />
+                </Style>
+            </ItemsControl.ItemContainerStyle>
+            <ItemsControl.Resources>
+
+                <DataTemplate DataType="{x:Type Draggable:AnchoredTag}">
+                    <Rectangle Panel.ZIndex="10" Width="40" Height="40" IsHitTestVisible="False">
+                        <!--<Rectangle.RenderTransform>
+                            <TranslateTransform X="-20" Y="-20"/>
+                        </Rectangle.RenderTransform>-->
+                        <Rectangle.Fill>
+                            <VisualBrush Stretch="Uniform"
+                                         Visual="{Binding Tag.Name, Converter={StaticResource StringToResource}}" />
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type Draggable:TextFrame}">
+                    <TextBox Panel.ZIndex="0" Background="#99FFFFFF" BorderBrush="#999" BorderThickness="2"
+                             TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"
+                             Width="{Binding Width}" Height="{Binding Height}" Text="{Binding Text, Mode=TwoWay}">
+                        <TextBox.ContextMenu>
+                            <ContextMenu Visibility="Collapsed" />
+                        </TextBox.ContextMenu>
+                    </TextBox>
+                </DataTemplate>
+
+            </ItemsControl.Resources>
+        </ItemsControl>
+
+        <!-- Bullet Components -->
+        <ItemsControl x:Name="BulletComponents" ItemsSource="{Binding BulletComponents}"
+                      Loaded="BulletComponents_Loaded">
+
+            <!-- Display onyle the Bullet of the current Layer -->
+            <ItemsControl.Visibility>
+                <MultiBinding Converter="{StaticResource ItemsEqualToVisibility}">
+                    <Binding Path="DataContext" RelativeSource="{RelativeSource AncestorType=Controls:LayerContainer}" />
+                    <Binding Path="DataContext.CurrentLayer"
+                             RelativeSource="{RelativeSource AncestorType=Controls:LayerStack}" />
+                </MultiBinding>
+            </ItemsControl.Visibility>
+
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Canvas />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemContainerStyle>
+                <Style>
+                    <Setter Property="Canvas.Left" Value="{Binding Position.X}" />
+                    <Setter Property="Canvas.Top" Value="{Binding Position.Y}" />
+                </Style>
+            </ItemsControl.ItemContainerStyle>
+            <ItemsControl.Resources>
+
+                <DataTemplate DataType="{x:Type Draggable:QCMBullet}">
+                    <CheckBox TouchDown="ToggleButton_TouchDown" TouchUp="ToggleButton_TouchUp"
+                              Style="{StaticResource NineCheckBox}" Content="{Binding Offset}"
+                              IsChecked="{Binding Checked, Mode=TwoWay}" Tag="{Binding}" />
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type Draggable:QCUBullet}">
+                    <RadioButton TouchDown="ToggleButton_TouchDown" TouchUp="ToggleButton_TouchUp"
+                                 GroupName="ExerciseRadioButton" Style="{StaticResource NineRadioButton}"
+                                 Content="{Binding Offset}" IsChecked="{Binding Checked, Mode=TwoWay}" Tag="{Binding}" />
+                </DataTemplate>
+
+            </ItemsControl.Resources>
+        </ItemsControl>
+
+        <!-- To Delete Selected Components (other way than press "Delete") -->
+        <Button Click="DeleteSelectedComponents_Click" x:Name="DeleteSelectedComponents" Visibility="Collapsed">
+            <Rectangle Width="12" Height="12" Fill="{StaticResource RedAccentBackgroundBrush}">
+                <Rectangle.OpacityMask>
+                    <VisualBrush Stretch="Uniform" Visual="{StaticResource appbar_close}" />
+                </Rectangle.OpacityMask>
+            </Rectangle>
+        </Button>
+
+    </Canvas>
+
+</UserControl>

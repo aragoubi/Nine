@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Nine.BaseModel" Collapsed="true">
+    <Position X="26.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Data" Collapsed="true">
+    <Position X="56.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAgAAAAQAAAAAACAAAAABIAIAAQAAAAAAAAAA=</HashCode>
+      <FileName>Data.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Layers.Components.Draggables.Anchor" Collapsed="true">
+    <Position X="33.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Layers\Components\Draggables\Anchor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Layers.Components.Draggables.AnchoredTag" Collapsed="true">
+    <Position X="32.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAABAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\Components\Draggables\AnchoredTag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Layers.Components.Draggables.Picture" Collapsed="true">
+    <Position X="34.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\Components\Draggables\Picture.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Layers.Components.DraggableComponent" Collapsed="true">
+    <Position X="33.5" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAIAAAAgAAAAAAAAAAAAAAAIgAAAgAAAAAA=</HashCode>
+      <FileName>Layers\Components\Draggables\DraggableComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Nine.Layers.Components.QuizBullet" Collapsed="true">
+    <Position X="37" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAIAAAACAAAAAA=</HashCode>
+      <FileName>Layers\Components\Draggables\QuizBullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Layers.Components.TextFrame" Collapsed="true">
+    <Position X="30.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAACAAAAAA=</HashCode>
+      <FileName>Layers\Components\Draggables\TextFrame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Layers.Components.Point" Collapsed="true">
+    <Position X="12" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>Layers\Components\Point.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Layers.Components.Links.LayerLink" Collapsed="true">
+    <Position X="25.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAQAAAAAAAAAAAAEAAAAAAAAAAEAQAAAAAAAAA=</HashCode>
+      <FileName>Layers\Components\Links\LayerLink.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Nine.Layers.Components.Links.URLLink" Collapsed="true">
+    <Position X="41.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAACQAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Layers\Components\Links\URLLink.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Nine.Layers.Components.Strokes.DA.Brushes" Collapsed="true">
+    <Position X="56.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAQAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\Components\Strokes\DA\Brushes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Layers.Components.Strokes.DA.Color" Collapsed="true">
+    <Position X="54.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAIBAAAAAAAAAAACgAKAEAAQA=</HashCode>
+      <FileName>Layers\Components\Strokes\DA\Color.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Layers.Components.Strokes.DA.DrawingAttributes" Collapsed="true">
+    <Position X="52.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAABACIAAIAAAACAEAAABAAAAAAAAAAgAACAAA=</HashCode>
+      <FileName>Layers\Components\Strokes\DA\DrawingAttributes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Layers.Components.Strokes.Stroke" Collapsed="true">
+    <Position X="15.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAwAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Layers\Components\Strokes\Stroke.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Layers.Components.Strokes.StrokePoint" Collapsed="true">
+    <Position X="12" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Layers\Components\Strokes\StrokePoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Layers.Layer" Collapsed="true">
+    <Position X="7.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAIAAAAAAIIAABAAQAAQABAAQAAAAAAAAQAAAEAA=</HashCode>
+      <FileName>Layers\Layer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Layers.MinimalLayer" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAQAAAAAAAAAAAAAAAAAEIA=</HashCode>
+      <FileName>Layers\MinimalLayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Lessons.Contents.Content" Collapsed="true">
+    <Position X="21.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAARgAgAAAAACAAAAAAAAAQGAAAAABAEgAAAAAAAEAA=</HashCode>
+      <FileName>Lessons\Contents\Content.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Lessons.Contents.ExerciseContent" Collapsed="true">
+    <Position X="21" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAACAABAAAAEQAAAAAAKDAAAAQAAAAgQAAABEAA=</HashCode>
+      <FileName>Lessons\Contents\ExerciseContent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Lessons.Contents.GlobalNotesContent" Collapsed="true">
+    <Position X="23.25" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lessons\Contents\GlobalNotesContent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Lessons.Contents.NamedContent" Collapsed="true">
+    <Position X="22.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lessons\Contents\NamedContent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Lessons.Contents.SlideContent" Collapsed="true">
+    <Position X="18.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lessons\Contents\SlideContent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Lessons.Contents.Processing.ExerciseProcessing" Collapsed="true">
+    <Position X="3.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAQAAAAgAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lessons\Contents\Processing\ExerciseProcessing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Lessons.Contents.Processing.GraphicalProcessing" Collapsed="true">
+    <Position X="0.75" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>CAAAAACABAAAAAAAAgAAAEAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lessons\Contents\Processing\GraphicalProcessing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Lessons.Contents.Processing.QuizProcessing" Collapsed="true">
+    <Position X="3.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAIAAAAAABgAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lessons\Contents\Processing\QuizProcessing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Lessons.Contents.Processing.UnrestrictedProcessing" Collapsed="true">
+    <Position X="5.5" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAgAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lessons\Contents\Processing\UnrestrictedProcessing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Lessons.Holders.BasicHolder" Collapsed="true">
+    <Position X="48.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lessons\Holders\BasicHolder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Lessons.Holders.ExerciseHolder" Collapsed="true">
+    <Position X="46" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAgAACIAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Lessons\Holders\ExerciseHolder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Lessons.Holders.GlobalNotesHolder" Collapsed="true">
+    <Position X="48.25" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lessons\Holders\GlobalNotesHolder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Lessons.Holders.NamedContentHolder" Collapsed="true">
+    <Position X="47.25" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAECAAAAAAAAAA=</HashCode>
+      <FileName>Lessons\Holders\NamedContentHolder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Lessons.Holders.SlideHolder" Collapsed="true">
+    <Position X="50.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lessons\Holders\SlideHolder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Lessons.Lesson" Collapsed="true">
+    <Position X="28" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAIAAAAAQABAAQAAEAAAQAAACAgEAAAAAAAAAABAA=</HashCode>
+      <FileName>Lessons\Lesson.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Lessons.Tag" Collapsed="true">
+    <Position X="39.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAABIAAAAAAAABQAAQAAAAAAIAAgAAAAAAAAAA=</HashCode>
+      <FileName>Lessons\Tag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Roles.Group" Collapsed="true">
+    <Position X="43.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAgAAAAAAAAAAAAAAIAAAAAAAAAAAQA=</HashCode>
+      <FileName>Roles\Group.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Roles.Role" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAgAAAAAAE=</HashCode>
+      <FileName>Roles\Role.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Roles.User" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAgAEAAAAIQAAAAAAAAAAAABAAAAAQA=</HashCode>
+      <FileName>Roles\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Sharing.SharedPointer" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Sharing\SharedPointer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nine.Export">
+    <Position X="16" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Export.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Nine.Layers.Components.IComponent" Collapsed="true">
+    <Position X="0.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\Components\IComponent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Nine.Layers.Components.Links.Link" Collapsed="true">
+    <Position X="0.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\Components\Links\Link.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Nine.Lessons.Contents.Processing.QuizMode" Collapsed="true">
+    <Position X="53.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lessons\Contents\Processing\QuizMode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

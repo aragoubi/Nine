@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="9726a479-708e-48d3-9849-0c9474969d66" name="Activity1" linkedPackageId="18d2ee21-0c18-4cd0-8b8d-50d6d1d63fd6" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="beef0f33-fa9b-4fe2-a42b-fa7a49437610">
+      <elementDefinition Id="da29089d-35fc-4773-afcf-2e65185f3b1e" />
+      <body>Création d'une question provoquant une analyse graphique</body>
+    </comment>
+    <comment Id="6ecc7dcc-b0cf-4613-9fe1-34f96066d338">
+      <elementDefinition Id="2a0c62f8-735f-4e83-9bb1-7570b69f5654" />
+      <body>Carte de saillance permettant de visualiser où se situent les réponses</body>
+    </comment>
+    <comment Id="7006a329-987f-4b07-8880-3133e5a19c7f">
+      <elementDefinition Id="3180ed58-9ff2-4552-b017-2d88e2020967" />
+      <body>Professeur</body>
+    </comment>
+    <comment Id="be969f51-d067-4c73-ae9d-39274bd8dbf3">
+      <elementDefinition Id="37f99714-85c2-41ce-96be-7add697381be" />
+      <body>Etudiant</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="a49f0b1e-a7ac-4f32-a6ba-8df40076c4b1">
+      <profileInstance Id="715d4a53-2ee3-4d6b-9b7f-7d79a981e10c" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="8f42bb70-f5ca-406f-a991-0781062d2643">
+      <profileInstance Id="f58f1bd0-3acd-41e7-9210-3d4a11879e14" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="cb9727a0-1538-475f-b376-f277341378f5" name="Activity1" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="3442528e-dd2e-441e-ad9a-03532c05cb76" />
+        <nodes>
+          <initialNode Id="0c47a541-4370-409e-82c6-6bae13b84585" name="Initial1" isLeaf="false">
+            <elementDefinition Id="671ca386-3baa-47e8-bab9-cb356ca487ad" />
+            <flowNodeTargets>
+              <controlFlow Id="2725c51a-2abe-4c99-b9d5-c60698ee525a" isLeaf="false">
+                <opaqueActionMoniker Id="ff36999b-95d3-43bd-97ef-1c91b7355a98" LastKnownName="Créer un exercice" />
+                <elementDefinition Id="379d980e-58ca-4dd7-8ba4-f9c5c663d88b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="ff36999b-95d3-43bd-97ef-1c91b7355a98" name="Créer un exercice" isLeaf="false">
+            <elementDefinition Id="3bdd1df7-34d7-498f-b338-8676ef7b4966" />
+            <flowNodeTargets>
+              <controlFlow Id="65421e9b-d7b5-4b23-bc71-c613b55c1ade" isLeaf="false">
+                <forkNodeMoniker Id="9d5e67f0-ed4b-413f-bea3-1202aadc65e2" LastKnownName="Fork1" />
+                <elementDefinition Id="eb09e7e4-f6c3-49d3-9afc-faeb37c3b1cf" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="16620fed-91b6-4ce6-8b81-a1853fcf57ce" name="Soumettre aux étudiants" isLeaf="false">
+            <elementDefinition Id="fe26c563-bc43-4372-9b1b-45820a1a0f9a" />
+            <objectFlowTargets>
+              <objectFlow Id="bd67520f-3da7-4d1f-abfb-4871d1775e02" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="b186a040-7551-496d-a2a6-7fd01690ee2b" LastKnownName="Diffusion de l'exercice" />
+                <elementDefinition Id="396ed250-40dc-46f9-9dc2-629ac6d1147a" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <objectNode Id="b186a040-7551-496d-a2a6-7fd01690ee2b" name="Diffusion de l'exercice" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="1c8e4883-fa69-433e-8d5f-293f3c880a84" />
+            <objectFlowTargets>
+              <objectFlow Id="4e1c8bc5-5daa-418f-b9dd-d4002379fffe" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <forkNodeMoniker Id="f52458e1-d740-4187-8df4-a048e97c3764" LastKnownName="Fork2" />
+                <elementDefinition Id="da3a4dc8-90ea-41a2-bf86-19abf404f121" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="b4115364-6ad9-425f-bbd1-ce7f7e15fb84" name="2147483647" value="2147483647">
+                <elementDefinition Id="1a09645e-f320-486f-893b-b780ef9ad95f" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="f150e686-5f8a-4276-a779-5264f71e42ef" name="Génération d'une carte" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="d773b7f0-f989-4bfc-b7b7-2b1b84e58905" />
+            <objectFlowTargets>
+              <objectFlow Id="c45d4f9f-a53c-424c-86e7-e2d60b4f7244" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <activityFinalNodeMoniker Id="1a844a77-b5e7-4ea2-be5c-cf07a881b276" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="da736355-6d8e-4860-9899-8ff6defde500" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="272bea7d-ee64-4288-b3e4-899822401e01" name="2147483647" value="2147483647">
+                <elementDefinition Id="893998a6-db03-403e-bb16-0349b40ec4f0" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <activityFinalNode Id="1a844a77-b5e7-4ea2-be5c-cf07a881b276" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="b2ae1331-26ff-41d0-a8ed-cb9b503f5c17" />
+          </activityFinalNode>
+          <opaqueAction Id="19f3c792-244a-4c20-bf8e-d08a43dbbf52" name="Dessiner l'exercice" isLeaf="false">
+            <elementDefinition Id="12c07c6a-f9e9-43dd-acd5-4c842ff45739" />
+            <flowNodeTargets>
+              <controlFlow Id="d3163319-9fad-477d-8d32-286092751f84" isLeaf="false">
+                <joinNodeMoniker Id="6c40cf99-1563-4cf6-a706-1ffb1cd2cc99" LastKnownName="Join1" />
+                <elementDefinition Id="686586eb-3b0a-47d2-bbac-a4e572b20188" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="da261249-8619-4dae-ae38-3f58330ab4dd" name="Importer une image" isLeaf="false">
+            <elementDefinition Id="c79959ae-c53b-4206-a67e-fd2793dd6814" />
+            <flowNodeTargets>
+              <controlFlow Id="ffcdc013-481d-45c8-9bd3-ffca2d18165e" isLeaf="false">
+                <joinNodeMoniker Id="6c40cf99-1563-4cf6-a706-1ffb1cd2cc99" LastKnownName="Join1" />
+                <elementDefinition Id="083e4f2f-44bf-4a16-8097-9e4d23bfbcd2" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode Id="9d5e67f0-ed4b-413f-bea3-1202aadc65e2" name="Fork1" isLeaf="false">
+            <elementDefinition Id="15c57c55-0ed9-46b4-bb32-4f0f59738190" />
+            <flowNodeTargets>
+              <controlFlow Id="fa660086-3f6b-457f-a5e0-770ca9dce9e0" isLeaf="false">
+                <opaqueActionMoniker Id="da261249-8619-4dae-ae38-3f58330ab4dd" LastKnownName="Importer une image" />
+                <elementDefinition Id="9b5a6f43-0ca6-49cc-b7f1-cc16d9624a7a" />
+              </controlFlow>
+              <controlFlow Id="35de2ec6-6ae7-48ea-863f-257628f69e14" isLeaf="false">
+                <opaqueActionMoniker Id="19f3c792-244a-4c20-bf8e-d08a43dbbf52" LastKnownName="Dessiner l'exercice" />
+                <elementDefinition Id="d7396a4b-2609-4f5a-9f23-44763663e052" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <joinNode Id="6c40cf99-1563-4cf6-a706-1ffb1cd2cc99" name="Join1" isLeaf="false">
+            <elementDefinition Id="ad1f11fd-7a02-41d0-b901-11dca5063418" />
+            <flowNodeTargets>
+              <controlFlow Id="9bf55888-50ac-4389-b038-fed5fd4461fd" isLeaf="false">
+                <opaqueActionMoniker Id="16620fed-91b6-4ce6-8b81-a1853fcf57ce" LastKnownName="Soumettre aux étudiants" />
+                <elementDefinition Id="21060987-28a0-4dc6-92f9-a6b941d8fc2f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <opaqueAction Id="431c4776-9bff-417b-bccc-9afdc61e8f10" name="Pointer un élément" isLeaf="false">
+            <elementDefinition Id="0322f1a6-1a3b-45d7-8414-9facc0c13686" />
+            <flowNodeTargets>
+              <controlFlow Id="4fab2fbf-57fa-4489-a093-d7f88e29659a" isLeaf="false">
+                <joinNodeMoniker Id="22d8b001-f977-45a7-a2d7-a3511e0ad244" LastKnownName="Join2" />
+                <elementDefinition Id="14b9226f-fffc-41d6-a276-a2fc1e54778f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="7638048d-89e9-404f-ac53-40421c3c4a99" name="Entourer une forme" isLeaf="false">
+            <elementDefinition Id="4611b75e-27e3-4095-9cfe-d00a7a9c0c62" />
+            <flowNodeTargets>
+              <controlFlow Id="8985bae4-83b9-47df-9549-03638b04f2b4" isLeaf="false">
+                <joinNodeMoniker Id="22d8b001-f977-45a7-a2d7-a3511e0ad244" LastKnownName="Join2" />
+                <elementDefinition Id="34f90cc4-8057-40e5-b49d-cda037038100" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode Id="f52458e1-d740-4187-8df4-a048e97c3764" name="Fork2" isLeaf="false">
+            <elementDefinition Id="47d3e3aa-8940-467b-ac26-839ca36700d4" />
+            <flowNodeTargets>
+              <controlFlow Id="d80934b9-9286-410f-8ba2-a234d698149d" isLeaf="false">
+                <opaqueActionMoniker Id="431c4776-9bff-417b-bccc-9afdc61e8f10" LastKnownName="Pointer un élément" />
+                <elementDefinition Id="f5b771a9-657a-4752-a7fa-86409dc56e2c" />
+              </controlFlow>
+              <controlFlow Id="2be246dc-9bfc-4a98-8b4e-df02953261a6" isLeaf="false">
+                <opaqueActionMoniker Id="7638048d-89e9-404f-ac53-40421c3c4a99" LastKnownName="Entourer une forme" />
+                <elementDefinition Id="1f6c418b-c00c-40ad-b20a-3cf2b791babb" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <joinNode Id="22d8b001-f977-45a7-a2d7-a3511e0ad244" name="Join2" isLeaf="false">
+            <elementDefinition Id="c532a069-1e27-43e9-abcb-7f1cb453f9f8" />
+            <flowNodeTargets>
+              <controlFlow Id="7c37c603-872b-4a8c-bf3f-8045903bf186" isLeaf="false">
+                <opaqueActionMoniker Id="ab742fb9-0a8e-48db-9b31-2957bd6fdc21" LastKnownName="Fournir la réponse" />
+                <elementDefinition Id="8f0e76e0-1e11-462d-996a-eedf9bcd301d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <objectNode Id="83026bbf-4cd4-4a9e-8520-3b4353b939b4" name="Communication de la réponse" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="57467ebb-89a7-41a2-9433-073c29a900b0" />
+            <objectFlowTargets>
+              <objectFlow Id="801ef9f6-5854-4604-b849-95280709cc93" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="f150e686-5f8a-4276-a779-5264f71e42ef" LastKnownName="Génération d'une carte" />
+                <elementDefinition Id="3226c76f-0fca-47b2-85d7-f9762e85b3bc" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="02091e93-3988-4c98-ac06-239d2620d0db" name="2147483647" value="2147483647">
+                <elementDefinition Id="51ea29cf-7c20-456d-87b6-96586f0ad7cc" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="ab742fb9-0a8e-48db-9b31-2957bd6fdc21" name="Fournir la réponse" isLeaf="false">
+            <elementDefinition Id="bd0a940a-e5e5-40fb-837c-55203cf095d6" />
+            <objectFlowTargets>
+              <objectFlow Id="7fe1ac54-4383-47f3-bc00-3e60592d32a8" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="83026bbf-4cd4-4a9e-8520-3b4353b939b4" LastKnownName="Communication de la réponse" />
+                <elementDefinition Id="45b1b764-ca92-4136-855c-6cdbc76dc41f" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="18d2ee21-0c18-4cd0-8b8d-50d6d1d63fd6" name="Modelisation">
+    <elementDefinition Id="6be4d209-fca6-444d-b908-055f8648b195" />
+  </package>
+</activityRootModel>

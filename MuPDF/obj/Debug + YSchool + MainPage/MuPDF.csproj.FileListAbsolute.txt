@@ -1,0 +1,16 @@
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + YSchool + MainPage\MuPdf.dll
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + YSchool + MainPage\MuPdfWrapper.dll
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + YSchool + MainPage\MuPdfWrapper.pdb
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + YSchool + MainPage\System.Windows.Interactivity.dll
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + YSchool + MainPage\System.Windows.Interactivity.xml
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + YSchool + MainPage\de\System.Windows.Interactivity.resources.dll
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + YSchool + MainPage\en\System.Windows.Interactivity.resources.dll
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + YSchool + MainPage\es\System.Windows.Interactivity.resources.dll
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + YSchool + MainPage\fr\System.Windows.Interactivity.resources.dll
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + YSchool + MainPage\it\System.Windows.Interactivity.resources.dll
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + YSchool + MainPage\ja\System.Windows.Interactivity.resources.dll
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + YSchool + MainPage\ko\System.Windows.Interactivity.resources.dll
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + YSchool + MainPage\zh-Hans\System.Windows.Interactivity.resources.dll
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + YSchool + MainPage\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\obj\Debug + YSchool + MainPage\MuPdfWrapper.dll
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\obj\Debug + YSchool + MainPage\MuPdfWrapper.pdb

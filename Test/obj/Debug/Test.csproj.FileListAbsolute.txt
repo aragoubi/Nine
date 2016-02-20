@@ -1,0 +1,11 @@
+C:\Users\aymen\Desktop\Nine\Test\bin\Debug\Test.exe.config
+C:\Users\aymen\Desktop\Nine\Test\bin\Debug\Test.exe
+C:\Users\aymen\Desktop\Nine\Test\bin\Debug\Test.pdb
+C:\Users\aymen\Desktop\Nine\Test\bin\Debug\HeatMap.dll
+C:\Users\aymen\Desktop\Nine\Test\bin\Debug\HeatMap.pdb
+C:\Users\aymen\Desktop\Nine\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Users\aymen\Desktop\Nine\Test\obj\Debug\Test.exe
+C:\Users\aymen\Desktop\Nine\Test\obj\Debug\Test.pdb
+C:\Users\aymen\Desktop\Nine\Test\bin\Debug\MuPdf.dll
+C:\Users\aymen\Desktop\Nine\Test\bin\Debug\MuPdfWrapper.dll
+C:\Users\aymen\Desktop\Nine\Test\bin\Debug\MuPdfWrapper.pdb

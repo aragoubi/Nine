@@ -1,0 +1,225 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Canvas x:Key="tag_wrench" Width="48" Height="48">
+        <Path Fill="#FF607D8B"
+              Data="M44.7 11L36 19.6c0 0-2.6 0-5.2-2.6s-2.6-5.2-2.6-5.2l8.7-8.7c-4.9-1.2-10.8 0.4-14.4 4 c-5.4 5.4-0.6 12.3-2 13.7C12.9 28.7 5.1 34.7 4.9 35c-2.3 2.3-2.4 6-0.2 8.2c2.2 2.2 5.9 2.1 8.2-0.2c0.3-0.3 6.7-8.4 14.2-15.9 c1.4-1.4 8 3.7 13.6-1.8C44.2 21.7 45.9 15.9 44.7 11z M9.4 41.1c-1.4 0-2.5-1.1-2.5-2.5C6.9 37.1 8 36 9.4 36 c1.4 0 2.5 1.1 2.5 2.5C11.9 39.9 10.8 41.1 9.4 41.1z" />
+    </Canvas>
+
+    <Canvas x:Key="tag_reload" Width="48" Height="48">
+        <Path Fill="#FF3C39FA"
+              Data="M38.7 11.9l-3.1 2.5c2.2 2.7 3.4 6.1 3.4 9.5c0 8.3-6.7 15-15 15c-0.9 0-1.9-0.1-2.8-0.3l-0.7 3.9 c1.2 0.2 2.4 0.3 3.5 0.3c10.5 0 19-8.5 19-19C43 19.6 41.5 15.3 38.7 11.9z" />
+        <Polygon Points="31,8 42.9,9.6 33.1,19.4" FillRule="NonZero" Fill="#FF3C39FA" />
+        <Path Fill="#FF3C39FA"
+              Data="M24 5C13.5 5 5 13.5 5 24c0 4.6 1.6 9 4.6 12.4l3-2.6C10.3 31.1 9 27.6 9 24c0-8.3 6.7-15 15-15 c0.9 0 1.9 0.1 2.8 0.3l0.7-3.9C26.4 5.1 25.2 5 24 5z" />
+        <Polygon Points="17,40 5.1,38.4 14.9,28.6" FillRule="NonZero" Fill="#FF3C39FA" />
+    </Canvas>
+
+    <Canvas x:Key="tag_conversation" Width="48" Height="48">
+        <Path Fill="#FF009688" Data="M37 39H11l-6 6V11c0-3.3 2.7-6 6-6h26c3.3 0 6 2.7 6 6v22C43 36.3 40.3 39 37 39z" />
+        <Canvas>
+            <Ellipse Canvas.Left="21" Canvas.Top="19" Width="6" Height="6" Fill="#FFFFFFFF" />
+            <Ellipse Canvas.Left="31" Canvas.Top="19" Width="6" Height="6" Fill="#FFFFFFFF" />
+            <Ellipse Canvas.Left="11" Canvas.Top="19" Width="6" Height="6" Fill="#FFFFFFFF" />
+        </Canvas>
+    </Canvas>
+
+    <Canvas x:Key="tag_save" Width="48" Height="48">
+        <Polygon Points="42,42 6,42 6,6 37,6 42,11" FillRule="NonZero" Fill="#FF78519D" />
+        <Path Fill="#FFFFFFFF"
+              Data="M39 39c0 0.553-0.447 1-1 1H10c-0.553 0-1-0.447-1-1V25c0-0.553 0.447-1 1-1h28c0.553 0 1 0.447 1 1V39z" />
+        <Canvas>
+            <Rectangle Canvas.Left="13" Canvas.Top="31" Width="22" Height="2" Fill="#FFCFD8DC" />
+            <Rectangle Canvas.Left="13" Canvas.Top="27" Width="22" Height="2" Fill="#FFCFD8DC" />
+            <Rectangle Canvas.Left="13" Canvas.Top="35" Width="22" Height="2" Fill="#FFCFD8DC" />
+        </Canvas>
+        <Path Fill="#FF553978" Data="M9 6v10c0 1.104 0.896 2 2 2h15c1.104 0 2-0.896 2-2V6H9z" />
+        <Path Fill="#FFB0BEC5" Data="M15 6v10c0 1.104 0.896 2 2 2h15c1.104 0 2-0.896 2-2V6H15z" />
+        <Rectangle Canvas.Left="26" Canvas.Top="8" Width="4" Height="8" Fill="#FF263238" />
+    </Canvas>
+
+    <Canvas x:Key="tag_gears" Width="48" Height="48">
+        <Path Fill="#FF607D8B"
+              Data="M39.6 27.2c0.1-0.7 0.2-1.4 0.2-2.2s-0.1-1.5-0.2-2.2l4.5-3.2c0.4-0.3 0.6-0.9 0.3-1.4L40 10.8 c-0.3-0.5-0.8-0.7-1.3-0.4l-5 2.3c-1.2-0.9-2.4-1.6-3.8-2.2l-0.5-5.5c-0.1-0.5-0.5-0.9-1-0.9h-8.6c-0.5 0-1 0.4-1 0.9l-0.5 5.5 c-1.4 0.6-2.7 1.3-3.8 2.2l-5-2.3c-0.5-0.2-1.1 0-1.3 0.4l-4.3 7.4c-0.3 0.5-0.1 1.1 0.3 1.4l4.5 3.2c-0.1 0.7-0.2 1.4-0.2 2.2 s0.1 1.5 0.2 2.2L4 30.4c-0.4 0.3-0.6 0.9-0.3 1.4L8 39.2c0.3 0.5 0.8 0.7 1.3 0.4l5-2.3c1.2 0.9 2.4 1.6 3.8 2.2l0.5 5.5 c0.1 0.5 0.5 0.9 1 0.9h8.6c0.5 0 1-0.4 1-0.9l0.5-5.5c1.4-0.6 2.7-1.3 3.8-2.2l5 2.3c0.5 0.2 1.1 0 1.3-0.4l4.3-7.4 c0.3-0.5 0.1-1.1-0.3-1.4L39.6 27.2z M24 35c-5.5 0-10-4.5-10-10c0-5.5 4.5-10 10-10c5.5 0 10 4.5 10 10C34 30.5 29.5 35 24 35z" />
+        <Path Fill="#FF455A64"
+              Data="M24 13c-6.6 0-12 5.4-12 12c0 6.6 5.4 12 12 12s12-5.4 12-12C36 18.4 30.6 13 24 13z M24 30 c-2.8 0-5-2.2-5-5c0-2.8 2.2-5 5-5s5 2.2 5 5C29 27.8 26.8 30 24 30z" />
+    </Canvas>
+
+    <Canvas x:Key="tag_share" Width="48" Height="48">
+        <Path Fill="#FF1976D2"
+              Data="M38.1 31.2L19.4 24l18.7-7.2c1.5-0.6 2.3-2.3 1.7-3.9c-0.6-1.5-2.3-2.3-3.9-1.7l-26 10C8.8 21.6 8 22.8 8 24 s0.8 2.4 1.9 2.8l26 10c0.4 0.1 0.7 0.2 1.1 0.2c1.2 0 2.3-0.7 2.8-1.9C40.4 33.5 39.6 31.8 38.1 31.2z" />
+        <Canvas>
+            <Ellipse Canvas.Left="4" Canvas.Top="17" Width="14" Height="14" Fill="#FF1E88E5" />
+            <Ellipse Canvas.Left="30" Canvas.Top="7" Width="14" Height="14" Fill="#FF1E88E5" />
+            <Ellipse Canvas.Left="30" Canvas.Top="27" Width="14" Height="14" Fill="#FF1E88E5" />
+        </Canvas>
+    </Canvas>
+
+    <Canvas x:Key="tag_star" Width="48" Height="48">
+        <Ellipse Canvas.Left="3" Canvas.Top="3" Width="42" Height="42" Fill="#FFF44336" />
+        <Polygon Points="24,11 27.9,18.9 36.6,20.2 30.3,26.3 31.8,35 24,30.9 16.2,35 17.7,26.3 11.4,20.2 20.1,18.9"
+                 FillRule="NonZero" Fill="#FFFFCA28" />
+    </Canvas>
+
+    <Canvas x:Key="tag_paint_palette" Width="48" Height="48">
+        <Path Fill="#FFFFC107"
+              Data="M24.639 4c-8.6 0-18.43 4.954-18.43 18.947C6.209 33.108 13.842 44 25.519 44c0.004 0 0.169 0 0.175 0 c4.385-0.079 9.105-2.918 9.105-8.959c0-1.157-0.431-2.159-0.809-3.042c-0.102-0.233-0.199-0.462-0.288-0.694 c-0.864-2.175 0.089-2.971 2.329-4.565c2.537-1.806 6.013-4.278 5.968-10.819C41.999 12.032 37.756 4 24.639 4z M25.199 39.2 c-2.241 0-4.001-1.76-4.001-3.999c0-2.241 1.76-4.001 4.001-4.001c2.238 0 3.998 1.76 3.998 4.001 C29.197 37.44 27.438 39.2 25.199 39.2z" />
+        <Ellipse Canvas.Left="31" Canvas.Top="13" Width="7" Height="7" Fill="#FF9C27B0" />
+        <Ellipse Canvas.Left="22" Canvas.Top="7" Width="7" Height="7" Fill="#FF2196F3" />
+        <Ellipse Canvas.Left="12" Canvas.Top="12" Width="7" Height="7" Fill="#FF4CAF50" />
+        <Ellipse Canvas.Left="11" Canvas.Top="23" Width="7" Height="7" Fill="#FFFF3D00" />
+    </Canvas>
+
+    <Canvas x:Key="tag_pin" Width="48" Height="48">
+        <Polygon Points="9.536,41.293 6,42 6.706,38.465 19.436,25.736 22.264,28.564" FillRule="NonZero"
+                 Fill="#FFB0BEC5" />
+        <Polygon Points="28.071,27.106 21,20.035 34,9 39,14" FillRule="NonZero" Fill="#FFD84315" />
+        <Canvas>
+            <Path Fill="#FFFF5722"
+                  Data="M33.515 6l-1.414 1.415c-0.781 0.78-0.781 2.047 0 2.828l5.656 5.656c0.781 0.781 2.048 0.781 2.828 0 L42 14.485L33.515 6z" />
+            <Path Fill="#FFFF5722"
+                  Data="M26.121 35l1.415-1.414c1.952-1.953 1.952-5.118 0-7.071l-6.051-6.051c-1.953-1.952-5.118-1.952-7.071 0 L13 21.879L26.121 35z" />
+        </Canvas>
+    </Canvas>
+
+    <Canvas x:Key="tag_tick" Width="48" Height="48">
+        <Ellipse Canvas.Left="3" Canvas.Top="3" Width="42" Height="42" Fill="#FF4CAF50" />
+        <Polygon Points="34.6,14.6 21,28.2 15.4,22.6 12.6,25.4 21,33.8 37.4,17.4" FillRule="NonZero" Fill="#FFCCFF90" />
+    </Canvas>
+
+    <Canvas x:Key="tag_exclamation" Width="48" Height="48">
+        <Path Fill="#FFEE5F00"
+              Data="M21.2 44.8l-18-18c-1.6-1.6-1.6-4.1 0-5.7l18-18c1.6-1.6 4.1-1.6 5.7 0l18 18c1.6 1.6 1.6 4.1 0 5.7l-18 18 C25.3 46.4 22.7 46.4 21.2 44.8z" />
+        <Path Fill="#FFFFFFFF"
+              Data="M21.6 32.7c0-0.3 0.1-0.6 0.2-0.9c0.1-0.3 0.3-0.5 0.5-0.7c0.2-0.2 0.5-0.4 0.8-0.5s0.6-0.2 1-0.2 s0.7 0.1 1 0.2c0.3 0.1 0.6 0.3 0.8 0.5c0.2 0.2 0.4 0.4 0.5 0.7c0.1 0.3 0.2 0.6 0.2 0.9s-0.1 0.6-0.2 0.9s-0.3 0.5-0.5 0.7 c-0.2 0.2-0.5 0.4-0.8 0.5c-0.3 0.1-0.6 0.2-1 0.2s-0.7-0.1-1-0.2s-0.5-0.3-0.8-0.5c-0.2-0.2-0.4-0.4-0.5-0.7S21.6 33.1 21.6 32.7z M25.8 28.1h-3.6L21.7 13h4.6L25.8 28.1z" />
+    </Canvas>
+
+    <Canvas x:Key="tag_idea" Width="48" Height="48">
+        <Ellipse Canvas.Left="4" Canvas.Top="2" Width="40" Height="40" Fill="#FFFFF59D" />
+        <Path Fill="#FFFBC02D"
+              Data="M37 22c0-7.7-6.6-13.8-14.5-12.9c-6 0.7-10.8 5.5-11.4 11.5c-0.5 4.6 1.4 8.7 4.6 11.3 c1.4 1.2 2.3 2.9 2.3 4.8V37h12v-0.1c0-1.8 0.8-3.6 2.2-4.8C35.1 29.7 37 26.1 37 22z" />
+        <Path Fill="#FFFFF59D"
+              Data="M30.6 20.2l-3-2c-0.3-0.2-0.8-0.2-1.1 0L24 19.8l-2.4-1.6c-0.3-0.2-0.8-0.2-1.1 0l-3 2 c-0.2 0.2-0.4 0.4-0.4 0.7s0 0.6 0.2 0.8l3.8 4.7V37h2V26c0-0.2-0.1-0.4-0.2-0.6l-3.3-4.1l1.5-1l2.4 1.6c0.3 0.2 0.8 0.2 1.1 0 l2.4-1.6l1.5 1l-3.3 4.1C25.1 25.6 25 25.8 25 26v11h2V26.4l3.8-4.7c0.2-0.2 0.3-0.5 0.2-0.8S30.8 20.3 30.6 20.2z" />
+        <Ellipse Canvas.Left="21" Canvas.Top="41" Width="6" Height="6" Fill="#FF5C6BC0" />
+        <Path Fill="#FF9FA8DA" Data="M26 45h-4c-2.2 0-4-1.8-4-4v-5h12v5C30 43.2 28.2 45 26 45z" />
+        <Canvas>
+            <Path Fill="#FF5C6BC0" Data="M30 41l-11.6 1.6c0.3 0.7 0.9 1.4 1.6 1.8l9.4-1.3C29.8 42.5 30 41.8 30 41z" />
+            <Polygon Points="18,38.7 18,40.7 30,39 30,37" FillRule="NonZero" Fill="#FF5C6BC0" />
+        </Canvas>
+    </Canvas>
+
+    <Canvas x:Key="tag_info" Width="48" Height="48">
+        <Ellipse Canvas.Left="3" Canvas.Top="3" Width="42" Height="42" Fill="#FF2196F3" />
+        <Rectangle Canvas.Left="22" Canvas.Top="22" Width="4" Height="11" Fill="#FFFFFFFF" />
+        <Ellipse Canvas.Left="21.5" Canvas.Top="14" Width="5" Height="5" Fill="#FFFFFFFF" />
+    </Canvas>
+
+    <Canvas x:Key="tag_heart" Width="48" Height="48">
+        <Path Fill="#FFF44336"
+              Data="M34 9c-4.2 0-7.9 2.1-10 5.4C21.9 11.1 18.2 9 14 9C7.4 9 2 14.4 2 21c0 11.9 22 24 22 24s22-12 22-24 C46 14.4 40.6 9 34 9z" />
+    </Canvas>
+
+    <Canvas x:Key="tag_lock" Width="48" Height="48">
+        <Path Fill="#FF424242"
+              Data="M24 4c-5.5 0-10 4.5-10 10v4h4v-4c0-3.3 2.7-6 6-6s6 2.7 6 6v4h4v-4C34 8.5 29.5 4 24 4z" />
+        <Path Fill="#FFFB8C00"
+              Data="M36 44H12c-2.2 0-4-1.8-4-4V22c0-2.2 1.8-4 4-4h24c2.2 0 4 1.8 4 4v18C40 42.2 38.2 44 36 44z" />
+        <Ellipse Canvas.Left="21" Canvas.Top="28" Width="6" Height="6" Fill="#FFC76E00" />
+    </Canvas>
+
+    <Canvas x:Key="tag_earth" Width="48" Height="48">
+        <Path Fill="#FF7CB342" Data="M24 4C13 4 4 13 4 24s9 20 20 20s20-9 20-20S35 4 24 4z" />
+        <Path Fill="#FF0277BD"
+              Data="M45 24c0 11.7-9.5 21-21 21S3 35.7 3 24S12.3 3 24 3S45 12.3 45 24z M23.8 33.7c0-0.4-0.2-0.6-0.6-0.8 c-1.3-0.4-2.5-0.4-3.6-1.5c-0.2-0.4-0.2-0.8-0.4-1.3c-0.4-0.4-1.5-0.6-2.1-0.8c-0.8 0-1.7 0-2.7 0c-0.4 0-1.1 0-1.5 0 c-0.6-0.2-1.1-1.1-1.5-1.7c0-0.2 0-0.6-0.4-0.6c-0.4-0.2-0.8 0.2-1.3 0c-0.2-0.2-0.2-0.4-0.2-0.6c0-0.6 0.4-1.3 0.8-1.7 c0.6-0.4 1.3 0.2 1.9 0.2c0.2 0 0.2 0 0.4 0.2c0.6 0.2 0.8 1 0.8 1.7c0 0.2 0 0.4 0 0.4c0 0.2 0.2 0.2 0.4 0.2 c0.2-1.1 0.2-2.1 0.4-3.2c0-1.3 1.3-2.5 2.3-2.9c0.4-0.2 0.6 0.2 1.1 0c1.3-0.4 4.4-1.7 3.8-3.4c-0.4-1.5-1.7-2.9-3.4-2.7 c-0.4 0.2-0.6 0.4-1 0.6c-0.6 0.4-1.9 1.7-2.5 1.7c-1.1-0.2-1.1-1.7-0.8-2.3c0.2-0.8 2.1-3.6 3.4-3.1c0.2 0.2 0.6 0.6 0.8 0.8 c0.4 0.2 1.1 0.2 1.7 0.2c0.2 0 0.4 0 0.6-0.2c0.2-0.2 0.2-0.2 0.2-0.4c0-0.6-0.6-1.3-1-1.7c-0.4-0.4-1.1-0.8-1.7-1.1 c-2.1-0.6-5.5 0.2-7.1 1.7s-2.9 4-3.8 6.1c-0.4 1.3-0.8 2.9-1 4.4c-0.2 1-0.4 1.9 0.2 2.9c0.6 1.3 1.9 2.5 3.2 3.4 c0.8 0.6 2.5 0.6 3.4 1.7c0.6 0.8 0.4 1.9 0.4 2.9c0 1.3 0.8 2.3 1.3 3.4c0.2 0.6 0.4 1.5 0.6 2.1c0 0.2 0.2 1.5 0.2 1.7 c1.3 0.6 2.3 1.3 3.8 1.7c0.2 0 1-1.3 1-1.5c0.6-0.6 1.1-1.5 1.7-1.9c0.4-0.2 0.8-0.4 1.3-0.8c0.4-0.4 0.6-1.3 0.8-1.9 C23.8 35.1 24 34.3 23.8 33.7z M24.2 14.3c0.2 0 0.4-0.2 0.8-0.4c0.6-0.4 1.3-1.1 1.9-1.5c0.6-0.4 1.3-1.1 1.7-1.5 c0.6-0.4 1.1-1.3 1.3-1.9c0.2-0.4 0.8-1.3 0.6-1.9c-0.2-0.4-1.3-0.6-1.7-0.8c-1.7-0.4-3.1-0.6-4.8-0.6c-0.6 0-1.5 0.2-1.7 0.8 c-0.2 1.1 0.6 0.8 1.5 1.1c0 0 0.2 1.7 0.2 1.9c0.2 1-0.4 1.7-0.4 2.7c0 0.6 0 1.7 0.4 2.1L24.2 14.3z M41.8 29 c0.2-0.4 0.2-1.1 0.4-1.5c0.2-1 0.2-2.1 0.2-3.1c0-2.1-0.2-4.2-0.8-6.1c-0.4-0.6-0.6-1.3-0.8-1.9c-0.4-1.1-1-2.1-1.9-2.9 c-0.8-1.1-1.9-4-3.8-3.1c-0.6 0.2-1 1-1.5 1.5c-0.4 0.6-0.8 1.3-1.3 1.9c-0.2 0.2-0.4 0.6-0.2 0.8c0 0.2 0.2 0.2 0.4 0.2 c0.4 0.2 0.6 0.2 1 0.4c0.2 0 0.4 0.2 0.2 0.4c0 0 0 0.2-0.2 0.2c-1 1.1-2.1 1.9-3.1 2.9c-0.2 0.2-0.4 0.6-0.4 0.8 c0 0.2 0.2 0.2 0.2 0.4c0 0.2-0.2 0.2-0.4 0.4c-0.4 0.2-0.8 0.4-1.1 0.6c-0.2 0.4 0 1.1-0.2 1.5c-0.2 1.1-0.8 1.9-1.3 2.9 c-0.4 0.6-0.6 1.3-1 1.9c0 0.8-0.2 1.5 0.2 2.1c1 1.5 2.9 0.6 4.4 1.3c0.4 0.2 0.8 0.2 1.1 0.6c0.6 0.6 0.6 1.7 0.8 2.3 c0.2 0.8 0.4 1.7 0.8 2.5c0.2 1 0.6 2.1 0.8 2.9c1.9-1.5 3.6-3.1 4.8-5.2C40.6 32.4 41.2 30.7 41.8 29z" />
+    </Canvas>
+
+    <Canvas x:Key="tag_flash" Width="48" Height="48">
+        <Polygon Points="33,22 23.6,22 30,5 19,5 13,26 21.6,26 17,45" FillRule="NonZero" Fill="#FFFFC107" />
+    </Canvas>
+
+    <Canvas x:Key="tag_game_controller" Width="48" Height="48">
+        <Path StrokeThickness="2" Stroke="#FF546E7A" StrokeMiterLimit="10" StrokeLineJoin="Round"
+              Data="M24 16 c-0.238-9.155 13-1 13-11" />
+        <Path Fill="#FFCFD8DC"
+              Data="M45 38c0 3.313-2 5-5 5s-6-8-10-8s-7 0-11 0s-8 8-11 8s-5-1.687-5-5c0 0 0-24 9-24c4 0 5.116 2 7 2 c4.144 0 4.856 0 9 0c1.885 0 4-2 8-2C45 14 45 38 45 38z" />
+        <Path Fill="#FFFFFFFF"
+              Data="M41.071 23.586c0.78 0.781 0.78 2.047 0 2.828l-5.657 5.657c-0.781 0.78-2.047 0.78-2.828 0l-5.657-5.657 c-0.78-0.781-0.78-2.047 0-2.828l5.657-5.657c0.781-0.78 2.047-0.78 2.828 0L41.071 23.586z" />
+        <Ellipse Canvas.Left="32" Canvas.Top="19" Width="4" Height="4" Fill="#FFFFC107" />
+        <Ellipse Canvas.Left="32" Canvas.Top="27" Width="4" Height="4" Fill="#FF8BC34A" />
+        <Path Fill="#FFF44336" Data="M36 25c0-1.102 0.895-2 2-2c1.104 0 2 0.898 2 2s-0.896 2-2 2S36 26.102 36 25z" />
+        <Ellipse Canvas.Left="28" Canvas.Top="23" Width="4" Height="4" Fill="#FF2196F3" />
+        <Canvas>
+            <Rectangle Canvas.Left="12" Canvas.Top="20" Width="4" Height="4" Fill="#FF78909C" />
+            <Rectangle Canvas.Left="16" Canvas.Top="24" Width="4" Height="4" Fill="#FF78909C" />
+            <Rectangle Canvas.Left="8" Canvas.Top="24" Width="4" Height="4" Fill="#FF78909C" />
+            <Rectangle Canvas.Left="12" Canvas.Top="28" Width="4" Height="4" Fill="#FF78909C" />
+        </Canvas>
+    </Canvas>
+
+    <Canvas x:Key="tag_battery" Width="48" Height="48">
+        <Canvas>
+            <Path Fill="#FF8BC34A"
+                  Data="M34 44H14c-1.1 0-2-0.9-2-2V8c0-1.1 0.9-2 2-2h20c1.1 0 2 0.9 2 2v34C36 43.1 35.1 44 34 44z" />
+            <Path Fill="#FF8BC34A"
+                  Data="M28 13h-8c-0.6 0-1-0.4-1-1V5c0-0.6 0.4-1 1-1h8c0.6 0 1 0.4 1 1v7C29 12.6 28.6 13 28 13z" />
+        </Canvas>
+        <Polygon Points="30,24 24.5,24 26.7,13 18,26 23.5,26 21.3,37" FillRule="NonZero" Fill="#FFFFEB3B" />
+    </Canvas>
+
+    <Canvas x:Key="tag_bug" Width="48" Height="48">
+        <Canvas>
+            <Polyline Points="27,32 31,35 32,42 35,44" FillRule="NonZero" StrokeThickness="2" Stroke="#FF455A64"
+                      StrokeLineJoin="Round" />
+            <Polyline Points="28,26 33,27 34,31 36,33" FillRule="NonZero" StrokeThickness="2" Stroke="#FF455A64"
+                      StrokeLineJoin="Round" />
+            <Polyline Points="29,22 34,20 31,15 33,12" FillRule="NonZero" StrokeThickness="2" Stroke="#FF455A64"
+                      StrokeLineJoin="Round" />
+            <Polyline Points="21,32 17,35 16,42 13,44" FillRule="NonZero" StrokeThickness="2" Stroke="#FF455A64"
+                      StrokeLineJoin="Round" />
+            <Polyline Points="20,26 15,27 14,31 12,33" FillRule="NonZero" StrokeThickness="2" Stroke="#FF455A64"
+                      StrokeLineJoin="Round" />
+            <Polyline Points="19,22 14,20 17,15 15,12" FillRule="NonZero" StrokeThickness="2" Stroke="#FF455A64"
+                      StrokeLineJoin="Round" />
+        </Canvas>
+        <Canvas>
+            <Path StrokeThickness="2" Stroke="#FF4DB6AC" Data="M39 4c0 0-14 1-14 10" />
+            <Path StrokeThickness="2" Stroke="#FF4DB6AC" Data="M9 4c0 0 14 1 14 10" />
+        </Canvas>
+        <Path Fill="#FF00695C"
+              Data="M27.021 20.812c0 1.67-1.354 3.021-3.021 3.021l0 0c-1.669 0-3.021-1.352-3.021-3.021v-5.79 C20.979 13.352 22.331 12 24 12l0 0c1.668 0 3.021 1.352 3.021 3.021V20.812z" />
+        <Path Fill="#FF26A69A" Data="M24 42c-6 0-7-22-7-22c0-1.104 4-2 7-2s7 0.896 7 2C31 20 30 42 24 42z" />
+        <Path Fill="#FF00897B"
+              Data="M23 41.773C23.313 41.918 23.646 42 24 42s0.687-0.082 1-0.227V18.034C24.669 18.013 24.335 18 24 18 s-0.669 0.013-1 0.034V41.773z" />
+    </Canvas>
+
+    <Canvas x:Key="tag_alarm" Width="48" Height="48">
+        <Canvas>
+            <Path Fill="#FF37474F"
+                  Data="M38.5 44.6l-4-4l2.1-2.1l4 4c0.6 0.6 0.6 1.5 0 2.1l0 0C40.1 45.1 39.1 45.1 38.5 44.6z" />
+            <Path Fill="#FF37474F"
+                  Data="M9.5 44.6l4-4l-2.1-2.1l-4 4c-0.6 0.6-0.6 1.5 0 2.1l0 0C7.9 45.1 8.9 45.1 9.5 44.6z" />
+        </Canvas>
+        <Ellipse Canvas.Left="4" Canvas.Top="4" Width="40" Height="40" Fill="#FFC62828" />
+        <Ellipse Canvas.Left="8" Canvas.Top="8" Width="32" Height="32" Fill="#FFEEEEEE" />
+        <Rectangle Canvas.Left="15.530" Canvas.Top="33" Width=".8" Height="13" Fill="#FFE53935">
+            <Rectangle.RenderTransform>
+                <MatrixTransform Matrix="-.707 -.707 .707 -.707 0 0" />
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Canvas.Left="23" Canvas.Top="11" Width="2" Height="13" Fill="#000000" />
+        <Rectangle Canvas.Left="31.8" Canvas.Top="30.2" Width="2.3" Height="9.2" Fill="#000000">
+            <Rectangle.RenderTransform>
+                <MatrixTransform Matrix="-.707 .707 -.707 -.707 0 0" />
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Ellipse Canvas.Left="22" Canvas.Top="22" Width="4" Height="4" Fill="#000000" />
+        <Ellipse Canvas.Left="23" Canvas.Top="23" Width="2" Height="2" Fill="#FFC62828" />
+        <Rectangle Canvas.Left="22" Canvas.Top="1" Width="4" Height="3" Fill="#FF37474F" />
+        <Canvas>
+            <Path Fill="#FF37474F" Data="M44.4 16.2c2.5-3.5 2.1-8.4-1-11.5c-3.1-3.1-8-3.5-11.5-1L44.4 16.2z" />
+            <Path Fill="#FF37474F" Data="M3.6 16.2c-2.5-3.5-2.1-8.4 1-11.5c3.1-3.1 8-3.5 11.5-1L3.6 16.2z" />
+        </Canvas>
+    </Canvas>
+
+</ResourceDictionary>

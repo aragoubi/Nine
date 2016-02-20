@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="4a1aa771-b191-4fa1-ad06-c46bcb4ecaed" name="Activity1" linkedPackageId="256e37c7-e7b5-49a6-bebb-ab3ce1ccd076" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="3bb00e4d-5b1e-48f4-bcff-98a23854966b">
+      <elementDefinition Id="78cc7a27-5491-4d2e-8e13-af009884935f" />
+      <body>Point de vue professeur</body>
+    </comment>
+    <comment Id="23c375bd-7626-4336-b22d-bb717cfd1ba4">
+      <elementDefinition Id="d28666d7-fa74-4c14-8c44-f6a30fa75c40" />
+      <body>Point de vue élève</body>
+    </comment>
+    <comment Id="3e86a901-4f17-4031-a8dd-fe8a5c77c02d">
+      <elementDefinition Id="6ecafb59-26b5-48bb-b915-695a56441209" />
+      <body>Cette étape comprend l'identification</body>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="32e65890-3cb3-4f6a-a587-d4172a8ee4c7" name="Activity1" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="3966ffc8-d686-4cf0-bcda-45b89e313f15" />
+        <nodes>
+          <initialNode Id="4da0aa9f-0529-4108-98ee-a0b31462bcb3" name="Initial1" isLeaf="false">
+            <elementDefinition Id="e1571f12-e144-4243-904c-6678b68ce209" />
+            <flowNodeTargets>
+              <controlFlow Id="9ff47925-95f4-4236-8323-7575ff02bf68" isLeaf="false">
+                <opaqueActionMoniker Id="b35af632-43ca-49ff-9a6f-a01169afba19" LastKnownName="Démarrer NINE" />
+                <elementDefinition Id="9971d8ac-8266-40c2-8600-e23a23540944" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="b35af632-43ca-49ff-9a6f-a01169afba19" name="Démarrer NINE" isLeaf="false">
+            <elementDefinition Id="7e81045a-748e-4b34-a7ae-682ce639ad7d" />
+            <flowNodeTargets>
+              <controlFlow Id="414f12a4-c6bb-408a-b8dc-e37a4bf173df" isLeaf="false">
+                <opaqueActionMoniker Id="fb4e8d55-98d6-4f04-99ba-213affac5f34" LastKnownName="Créer un groupe &quot;classe&quot;" />
+                <elementDefinition Id="caa6f9da-bb37-4f34-a4eb-e7c1a741fcd0" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="3d85760d-7b04-4e42-ae60-04c513db77a4" name="Importer un cours au format PDF" isLeaf="false">
+            <elementDefinition Id="307876c1-85ce-42ec-a941-855d76bb48cc" />
+            <objectFlowTargets>
+              <objectFlow Id="94b1d167-3026-4b63-b380-ab90a5cb5fd5" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="a05226f9-8ea2-4dc7-ba2b-c12d9919f766" LastKnownName="Conversion du support" />
+                <elementDefinition Id="dd15f4ec-21b3-4e1b-8065-58d7728b989b" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <opaqueAction Id="fb4e8d55-98d6-4f04-99ba-213affac5f34" name="Créer un groupe &quot;classe&quot;" isLeaf="false">
+            <elementDefinition Id="a59b3326-1e8c-41f9-af5e-9d3142bc0cfa" />
+            <objectFlowTargets>
+              <objectFlow Id="bba06a49-9fc9-4668-b0db-086164ea2991" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="971e6401-2f2b-4f43-bd36-66bf93212350" LastKnownName="Création du groupe" />
+                <elementDefinition Id="ed66cc21-8330-4c90-bbee-f823cdca7421" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <opaqueAction Id="63dfdc61-156a-46fd-8fcc-657be6cc6225" name="Interagir" isLeaf="false">
+            <elementDefinition Id="34c51755-38f9-454b-8549-7590ea07a47a" />
+            <flowNodeTargets>
+              <controlFlow Id="b3b131bd-2e00-452d-b3d3-eed43a33be2c" isLeaf="false">
+                <opaqueActionMoniker Id="0207acfc-3a8d-4046-ba2b-cb513ba78efb" LastKnownName="Interagir" />
+                <elementDefinition Id="af1a253a-765d-4816-a070-0c1ffec5fae7" />
+              </controlFlow>
+              <controlFlow Id="2fb532f6-13ca-4c09-996f-ca79e3023c29" isLeaf="false">
+                <opaqueActionMoniker Id="a6d1839e-c8a4-4837-90f6-d02e9a89cdc1" LastKnownName="Clore le cours" />
+                <elementDefinition Id="10ef3eb5-f305-4440-b9dd-cc8649521341" />
+              </controlFlow>
+              <controlFlow Id="1f5f1236-a436-4c6c-9476-926411738063" isLeaf="false">
+                <opaqueActionMoniker Id="63dfdc61-156a-46fd-8fcc-657be6cc6225" LastKnownName="Interagir" />
+                <elementDefinition Id="4b1fbae3-caa3-4b11-a046-c31c48d5cb81" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="a6d1839e-c8a4-4837-90f6-d02e9a89cdc1" name="Clore le cours" isLeaf="false">
+            <elementDefinition Id="ee64cdd9-cbed-4f43-b482-f63cffa1048e" />
+            <flowNodeTargets>
+              <controlFlow Id="c0e30da4-bf74-4cd9-adf3-31f763338b70" isLeaf="false">
+                <activityFinalNodeMoniker Id="7236438d-c4a1-407d-b0ef-61bdf706b451" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="e928f7b9-ff5f-4389-8652-f9a4d48cbeed" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="7236438d-c4a1-407d-b0ef-61bdf706b451" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="258fed0b-116c-4431-9ae2-da51cb35b821" />
+          </activityFinalNode>
+          <initialNode Id="04e8fb0a-b05a-4efc-809f-b0688e46a91a" name="Initial11" isLeaf="false">
+            <elementDefinition Id="ce7ac77f-3334-4a5b-bb83-99efe177aafb" />
+            <flowNodeTargets>
+              <controlFlow Id="7c4d5f81-8734-4cd5-b620-0f10f7b1200c" isLeaf="false">
+                <opaqueActionMoniker Id="ee360c66-7088-463b-b360-f06c3127983f" LastKnownName="Démarrer NINE" />
+                <elementDefinition Id="99c5b6e2-94d0-4722-b509-35f8228c48eb" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="ee360c66-7088-463b-b360-f06c3127983f" name="Démarrer NINE" isLeaf="false">
+            <elementDefinition Id="dfaba7cb-5f60-4150-a42d-92a0935deccf" />
+            <objectFlowTargets>
+              <objectFlow Id="9d849d8c-e60d-4192-bae2-6f03eec9a5cf" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="a31b59ef-4279-452a-b98f-10d277606717" LastKnownName="Attente la création d'un groupe classe" />
+                <elementDefinition Id="edf9eef8-5251-42de-ab27-b6e5d281678a" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <opaqueAction Id="3d26347f-9234-4874-b973-6f67f0cb2875" name="Rejoindre un groupe &quot;classe&quot;" isLeaf="false">
+            <elementDefinition Id="34842e0b-d5f9-4ea4-ad0b-46458f1f4f73" />
+            <flowNodeTargets>
+              <controlFlow Id="932c0b45-b776-48f5-8555-db307cd0f24d" isLeaf="false">
+                <joinNodeMoniker Id="2539a325-6971-4246-b2d0-9b81f1857aa6" LastKnownName="Join1" />
+                <elementDefinition Id="a9c20c12-3479-42af-aacb-332bcca1e164" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <objectNode Id="240f6268-e81f-4276-82a3-98341fce06a7" name="Téléchargement du support" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="d37b5a0a-4d1b-43df-9bf6-5dda37cd47d7" />
+            <objectFlowTargets>
+              <objectFlow Id="b59e14b3-b597-405d-9385-fdc962441529" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="0207acfc-3a8d-4046-ba2b-cb513ba78efb" LastKnownName="Interagir" />
+                <elementDefinition Id="e36a8708-df65-4084-971a-82cf44f921f5" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="f1c34067-cb64-4d46-8d71-0e7f736c3b25" name="2147483647" value="2147483647">
+                <elementDefinition Id="f10dd54a-b032-4ca0-92ce-d4a4aaea88b9" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="0207acfc-3a8d-4046-ba2b-cb513ba78efb" name="Interagir" isLeaf="false">
+            <elementDefinition Id="c6d9cad2-91ea-4760-9afa-49af446f7a5b" />
+            <flowNodeTargets>
+              <controlFlow Id="ed0ae040-235d-4248-9b2e-117572ddd011" isLeaf="false">
+                <opaqueActionMoniker Id="63dfdc61-156a-46fd-8fcc-657be6cc6225" LastKnownName="Interagir" />
+                <elementDefinition Id="2090d9f2-684d-48a5-84df-c1f1e97a308a" />
+              </controlFlow>
+              <controlFlow Id="2272db45-247a-438d-aeaa-7aeee8c37918" isLeaf="false">
+                <opaqueActionMoniker Id="de9c16d1-8b08-40a7-81ab-6c5ec0a34e47" LastKnownName="Quitter l'application" />
+                <elementDefinition Id="86856e67-fce9-43dc-b676-8f7c9ff433e9" />
+              </controlFlow>
+              <controlFlow Id="c1ce27d1-c146-41d6-8b12-5e57da40dd62" isLeaf="false">
+                <opaqueActionMoniker Id="0207acfc-3a8d-4046-ba2b-cb513ba78efb" LastKnownName="Interagir" />
+                <elementDefinition Id="0e12f447-17c8-4d72-bbe2-f2acabef38ce" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="de9c16d1-8b08-40a7-81ab-6c5ec0a34e47" name="Quitter l'application" isLeaf="false">
+            <elementDefinition Id="9a0a6b33-74c0-4e3e-997b-d2702b0102e8" />
+            <flowNodeTargets>
+              <controlFlow Id="59596b19-120a-4ad0-9192-cad1915b4154" isLeaf="false">
+                <activityFinalNodeMoniker Id="6481f74e-69c6-4f77-9619-ef7714208c8a" LastKnownName="ActivityFinal11" />
+                <elementDefinition Id="ba4655ff-fe67-4f88-ba4d-5d20fae7634e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="6481f74e-69c6-4f77-9619-ef7714208c8a" name="ActivityFinal11" isLeaf="false">
+            <elementDefinition Id="f839a9a2-8466-4adc-a42f-08ba94c11419" />
+          </activityFinalNode>
+          <objectNode Id="971e6401-2f2b-4f43-bd36-66bf93212350" name="Création du groupe" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="b58bf037-6aaf-4015-b451-a56391da79ed" />
+            <objectFlowTargets>
+              <objectFlow Id="ebb18d04-bb38-4584-9e06-5d486f31bb70" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <forkNodeMoniker Id="2c7e3d56-138e-4224-af8c-89ff49bcdc25" LastKnownName="Fork2" />
+                <elementDefinition Id="c9ec5f31-2d45-4db0-991b-ff15f8d7c12a" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="a0f893fc-66d5-476b-9557-7ead85e728ca" name="2147483647" value="2147483647">
+                <elementDefinition Id="4591d5b0-5e0c-4a8d-a2b0-1dcea5331f7e" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <forkNode Id="2c7e3d56-138e-4224-af8c-89ff49bcdc25" name="Fork2" isLeaf="false">
+            <elementDefinition Id="0be07cfe-dc24-4207-9e88-4c305a4029ac" />
+            <flowNodeTargets>
+              <controlFlow Id="04234abb-20f5-464a-8fb4-318325ade998" isLeaf="false">
+                <opaqueActionMoniker Id="3d85760d-7b04-4e42-ae60-04c513db77a4" LastKnownName="Importer un cours au format PDF" />
+                <elementDefinition Id="e73c664a-3a14-45e9-8f53-9d022f889165" />
+              </controlFlow>
+              <controlFlow Id="f3ffb0c2-8cdc-4d9c-8026-4068309f9655" isLeaf="false">
+                <joinNodeMoniker Id="c1d92c3d-a6e6-488c-8239-216cf8a4597d" LastKnownName="Join2" />
+                <elementDefinition Id="c1e82bef-0a65-4f31-857d-26949e5433d3" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <objectNode Id="a31b59ef-4279-452a-b98f-10d277606717" name="Attente la création d'un groupe classe" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="dbffd067-a81e-4797-9471-2798e72a29eb" />
+            <objectFlowTargets>
+              <objectFlow Id="271b63e1-fc6e-4633-8be6-688f8991ce91" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <joinNodeMoniker Id="c1d92c3d-a6e6-488c-8239-216cf8a4597d" LastKnownName="Join2" />
+                <elementDefinition Id="ceb726e8-28ed-40b1-8d99-4058c8f40b2d" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="6181460b-3360-4f2c-b385-a4b9fbbf4ba7" name="2147483647" value="2147483647">
+                <elementDefinition Id="51f86e0d-8dc8-4add-b25f-6f861b2e01c4" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="a05226f9-8ea2-4dc7-ba2b-c12d9919f766" name="Conversion du support" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="3668f83e-5791-44d9-940f-df8c90558e16" />
+            <objectFlowTargets>
+              <objectFlow Id="055fea25-8d7b-44bd-a0e7-def4652bb206" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <forkNodeMoniker Id="0d0b2378-ec19-4498-a120-274ba0450b90" LastKnownName="Fork3" />
+                <elementDefinition Id="a17366bf-a3ee-4981-ad6b-b8939237e5c8" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="7a2282db-a721-444c-a9dc-71f22e59455f" name="2147483647" value="2147483647">
+                <elementDefinition Id="7915280c-652c-49d0-89c1-362108a754fa" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <forkNode Id="0d0b2378-ec19-4498-a120-274ba0450b90" name="Fork3" isLeaf="false">
+            <elementDefinition Id="b1c0adf2-96aa-4d11-addf-2acbce9ce02f" />
+            <flowNodeTargets>
+              <controlFlow Id="09a1964d-7e1a-4f25-ba4a-cce7b25727ab" isLeaf="false">
+                <opaqueActionMoniker Id="63dfdc61-156a-46fd-8fcc-657be6cc6225" LastKnownName="Interagir" />
+                <elementDefinition Id="ae198c93-cc47-4b89-9398-ebed7ba6f3c1" />
+              </controlFlow>
+              <controlFlow Id="e3066882-7409-4468-80a1-187b8c7efce9" isLeaf="false">
+                <joinNodeMoniker Id="2539a325-6971-4246-b2d0-9b81f1857aa6" LastKnownName="Join1" />
+                <elementDefinition Id="95d5d366-2194-4232-a938-76eeaedc607d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <joinNode Id="2539a325-6971-4246-b2d0-9b81f1857aa6" name="Join1" isLeaf="false">
+            <elementDefinition Id="2114f665-f3a0-4624-aa09-29edf021ad9d" />
+            <objectFlowTargets>
+              <objectFlow Id="5178b4d1-a1ae-41cc-a644-4c5ce0e27bcb" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="240f6268-e81f-4276-82a3-98341fce06a7" LastKnownName="Téléchargement du support" />
+                <elementDefinition Id="3ad03777-4e16-40e8-b32e-b0cf7f50b0e4" />
+              </objectFlow>
+            </objectFlowTargets>
+          </joinNode>
+          <joinNode Id="c1d92c3d-a6e6-488c-8239-216cf8a4597d" name="Join2" isLeaf="false">
+            <elementDefinition Id="ba8fced2-413a-47a3-9ae0-de7224bc8b5e" />
+            <flowNodeTargets>
+              <controlFlow Id="c6a618b4-7394-430d-ae5f-6962100012f0" isLeaf="false">
+                <opaqueActionMoniker Id="3d26347f-9234-4874-b973-6f67f0cb2875" LastKnownName="Rejoindre un groupe &quot;classe&quot;" />
+                <elementDefinition Id="7a397f66-c0c0-44dd-8b43-6f905830fea3" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="256e37c7-e7b5-49a6-bebb-ab3ce1ccd076" name="Modelisation">
+    <elementDefinition Id="6be4d209-fca6-444d-b908-055f8648b195" />
+    <profileInstances>
+      <packageHasProfileInstances Id="cce5cda4-671d-424e-9f0a-6d13e83f1f45">
+        <profileInstance Id="efbe2bf7-a69f-4344-9950-d70a2ea4d458" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="da877c2f-93f0-4964-82a5-bb7f6efccdc2">
+        <profileInstance Id="6b544aa2-8774-40f1-b14d-9268a64e72cc" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</activityRootModel>

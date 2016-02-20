@@ -1,0 +1,98 @@
+﻿<UserControl x:Class="Nine.Views.Controls.LayerStack"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Controls="clr-namespace:Nine.Views.Controls"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- InkCanvas for the Pointer mode -->
+        <InkCanvas
+            x:Name="PointerCanvas"
+            Gesture="PointerCanvas_Gesture"
+            DefaultDrawingAttributes="{Binding DrawingAttributes}"
+            EditingMode="{Binding CurrentState.EditingMode}"
+            Strokes="{Binding PointerStrokes}"
+            StrokeCollected="PointerCanvas_StrokeCollected"
+            Background="Transparent"
+            Tag="Pointer"
+            Grid.Row="0">
+            <Panel.ZIndex>
+                <MultiBinding Converter="{StaticResource ItemsEqualToInt}">
+                    <Binding Path="CurrentState.InkingModeAsString" />
+                    <Binding Path="Tag" RelativeSource="{RelativeSource Self}" />
+                </MultiBinding>
+            </Panel.ZIndex>
+            <InkCanvas.IsEnabled>
+                <MultiBinding Converter="{StaticResource ItemsEqualToBoolean}">
+                    <Binding Path="CurrentState.InkingModeAsString" />
+                    <Binding Path="Tag" RelativeSource="{RelativeSource Self}" />
+                </MultiBinding>
+            </InkCanvas.IsEnabled>
+        </InkCanvas>
+
+        <!-- All the Layers : ItemsSource is the Collection<StrokeCollection> : Tag is the DataContex of the LayerStack -->
+        <ItemsControl ItemsSource="{Binding Layers}" Grid.ZIndex="0" Grid.Row="0">
+
+            <!-- Container for each Layers -->
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+
+                    <!-- Using a grid, to stack them on the same coord -->
+                    <Grid />
+
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+
+            <!-- Style of one of the Layers container -->
+            <ItemsControl.ItemContainerStyle>
+                <Style TargetType="ContentPresenter">
+
+                    <!-- ZIndex order, CurrentLayerIndex is on the top of the stack -->
+                    <Setter Property="Panel.ZIndex">
+                        <Setter.Value>
+                            <MultiBinding Converter="{StaticResource ItemsEqualToInt}">
+                                <Binding Path="Key" />
+                                <Binding Path="DataContext.CurrentLayerIndex"
+                                         RelativeSource="{RelativeSource AncestorType=Controls:LayerStack}" />
+                            </MultiBinding>
+                        </Setter.Value>
+                    </Setter>
+
+                    <!-- Visibility of each Layer according to their property IsDisplayed -->
+                    <Setter Property="Visibility">
+                        <Setter.Value>
+                            <Binding Path="Value.IsDisplayed" Converter="{StaticResource BooleanToVisibility}" />
+                        </Setter.Value>
+                    </Setter>
+
+                    <!-- Layer is enable only if it's the active layer -->
+                    <Setter Property="IsEnabled">
+                        <Setter.Value>
+                            <MultiBinding Converter="{StaticResource ItemsEqualToBoolean}">
+                                <Binding Path="Key" />
+                                <Binding Path="DataContext.CurrentLayerIndex"
+                                         RelativeSource="{RelativeSource AncestorType=Controls:LayerStack}" />
+                            </MultiBinding>
+                        </Setter.Value>
+                    </Setter>
+
+                </Style>
+            </ItemsControl.ItemContainerStyle>
+
+            <!-- Template of one of the Layers container -->
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Controls:LayerContainer DataContext="{Binding Value}" />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+
+        </ItemsControl>
+    </Grid>
+</UserControl>

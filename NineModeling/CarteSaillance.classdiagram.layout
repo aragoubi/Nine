@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="CarteSaillance">
+  <logicalClassDesignerModelMoniker Id="60e53b5d-6cd0-437d-8f1d-14fd6cb6afbc" />
+  <nestedChildShapes>
+    <interfaceShape Id="fd194980-7ee4-454f-9b32-564583f25398" absoluteBounds="7.125, 2.25, 2.25, 1.3828124701976776" hideQualifiedName="false" increaseHeight="0" customColor="207, 223, 191">
+      <interfaceMoniker Id="cced581b-e7ce-4548-bfeb-529c98ef9e28" LastKnownName="SaliencyMap" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="af3bea93-3dbb-436b-916d-c29377ea5982" absoluteBounds="7.14, 2.64, 2.2199999999999998, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="8c17684a-302b-4de1-9111-a96f0ae3e155" absoluteBounds="7.14, 2.8511718675494193, 2.2199999999999998, 0.68164060264825821" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </interfaceShape>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>

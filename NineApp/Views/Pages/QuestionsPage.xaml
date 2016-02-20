@@ -1,0 +1,290 @@
+﻿<Page x:Class="Nine.Views.Pages.QuestionsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      xmlns:Controls="clr-namespace:Nine.Views.Controls"
+      xmlns:RadialMenu="clr-namespace:RadialMenu.Controls;assembly=RadialMenu"
+      xmlns:MahApps="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+      xmlns:BetterPopup="clr-namespace:Nine.Tools"
+      PreviewTouchDown="Page_PreviewTouchDown"
+      Loaded="Page_Loaded">
+
+    <Page.Resources>
+        <!-- Right SideBar -->
+        <Style x:Key="BottomSideBar" TargetType="Grid">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding DataContext.IsFullscreenMode, ElementName=LayerStack}" Value="True">
+
+                    <!-- FullScreen Openning -->
+                    <DataTrigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Height">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.75" KeySpline="0.25,1,0.05,1" Value="0" />
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.EnterActions>
+
+                    <!-- FullScreen Closing -->
+                    <DataTrigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Height">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.75" KeySpline="0.25,1,0.05,1" Value="60" />
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.ExitActions>
+
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Left SideBar -->
+        <Style x:Key="LeftSideBar" TargetType="Grid">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding DataContext.IsFullscreenMode, ElementName=LayerStack}" Value="True">
+
+                    <!-- FullScreen Openning -->
+                    <DataTrigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Width">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.75" KeySpline="0.25,1,0.05,1" Value="0" />
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.EnterActions>
+
+                    <!-- FullScreen Closing -->
+                    <DataTrigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Width">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.75" KeySpline="0.25,1,0.05,1" Value="200" />
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.ExitActions>
+
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Page.Resources>
+
+    <DockPanel Background="{StaticResource SideBarBackgroundBrush}">
+
+        <BetterPopup:BetterPopup x:Name="popup" DataContext="{Binding LessonPage}" Placement="Center"
+                                 AllowsTransparency="True" PopupAnimation="Fade" IsOpen="{Binding PopupIsOpen}">
+            <Grid Background="#FFE8E8E8">
+                <GroupBox Header="Création d'exercices" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <StackPanel>
+                        <Label Content="Nom" />
+                        <TextBox x:Name="nameTB" Text="{Binding ExerciseName}" Margin="3 0" />
+                        <Grid Margin="0,10,0,5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Button Style="{StaticResource TileButtonStyle}" Grid.Column="0" Height="95" Width="95"
+                                    Margin="3 3" Command="{Binding BeginToComposeExercise}" CommandParameter="QCM">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition Height="30" />
+                                    </Grid.RowDefinitions>
+                                    <Rectangle Fill="White" Height="35" Width="35" Grid.Row="0">
+                                        <Rectangle.OpacityMask>
+                                            <VisualBrush Visual="{StaticResource checkbox_icon}" Stretch="Fill" />
+                                        </Rectangle.OpacityMask>
+                                    </Rectangle>
+                                    <TextBlock Grid.Row="1" Foreground="White" FontSize="18" FontFamily="Segoe UI"
+                                               HorizontalAlignment="Center" VerticalAlignment="Center" Margin="3,3,3,6">
+                                        QCM
+                                    </TextBlock>
+                                </Grid>
+                            </Button>
+                            <Button Style="{StaticResource TileButtonStyle}" Grid.Column="1" Height="95" Width="95"
+                                    Margin="3 3" Command="{Binding BeginToComposeExercise}" CommandParameter="QCU">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition Height="30" />
+                                    </Grid.RowDefinitions>
+                                    <Rectangle Fill="White" Height="35" Width="35" Grid.Row="0">
+                                        <Rectangle.OpacityMask>
+                                            <VisualBrush Visual="{StaticResource radio_icon}" Stretch="Fill" />
+                                        </Rectangle.OpacityMask>
+                                    </Rectangle>
+                                    <TextBlock Grid.Row="1" Foreground="White" FontSize="18" FontFamily="Segoe UI"
+                                               HorizontalAlignment="Center" VerticalAlignment="Center" Margin="3,3,3,6">
+                                        QCU
+                                    </TextBlock>
+                                </Grid>
+
+                            </Button>
+                            <Button Style="{StaticResource TileButtonStyle}" Grid.Column="2" Height="95" Width="95"
+                                    Margin="3 3" Command="{Binding BeginToComposeExercise}"
+                                    CommandParameter="Graphical">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition Height="30" />
+                                    </Grid.RowDefinitions>
+                                    <Rectangle Fill="White" Height="35" Width="35" Grid.Row="0">
+                                        <Rectangle.OpacityMask>
+                                            <VisualBrush Visual="{StaticResource graphic_icon}" Stretch="Fill" />
+                                        </Rectangle.OpacityMask>
+                                    </Rectangle>
+                                    <TextBlock Grid.Row="1" Foreground="White" FontSize="18" FontFamily="Segoe UI"
+                                               HorizontalAlignment="Center" VerticalAlignment="Center" Margin="3,3,3,6">
+                                        Graphique
+                                    </TextBlock>
+                                </Grid>
+                            </Button>
+                        </Grid>
+                        <Button Style="{StaticResource TileButtonStyle}" Height="22"
+                                Width="{Binding Width, ElementName=popup}" Background="Gray" Foreground="White"
+                                Margin="3,0,3,3" Command="{Binding ClosePopup}">
+                            <TextBlock Text="Annuler" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Button>
+                    </StackPanel>
+                </GroupBox>
+            </Grid>
+        </BetterPopup:BetterPopup>
+
+        <!-- Bottom AppBar -->
+        <Grid
+            DockPanel.Dock="Bottom">
+            <Controls:AppBar
+                x:Name="AppBar"
+                Height="0"
+                DataContext="{Binding DataContext.AppBarState, ElementName=LayerStack}"
+                Tag="{Binding DataContext, ElementName=LayerStack}" />
+        </Grid>
+
+        <!-- Bottom SideBar -->
+        <Grid
+            DockPanel.Dock="Bottom"
+            Height="60"
+            Style="{StaticResource BottomSideBar}">
+            <Controls:BottomSideBar
+                x:Name="BottomSideBar"
+                DataContext="{Binding DataContext, ElementName=LayerStack}" />
+        </Grid>
+
+        <!-- Bottom SideBar -->
+
+        <DockPanel DockPanel.Dock="Top">
+
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="PreviewTouchDown">
+                    <i:InvokeCommandAction Command="{Binding DataContext.Close, ElementName=AppBar}" />
+                </i:EventTrigger>
+                <i:EventTrigger EventName="PreviewMouseDown">
+                    <i:InvokeCommandAction Command="{Binding DataContext.Close, ElementName=AppBar}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+
+            <!-- Left Sidebar -->
+            <Grid
+                DockPanel.Dock="Left"
+                Width="200"
+                Style="{StaticResource LeftSideBar}">
+                <Controls:QuestionSideBar
+                    x:Name="LessonSidebar"
+                    DataContext="{Binding LessonPage}" />
+            </Grid>
+
+            <!-- MainContent -->
+            <Grid
+                DockPanel.Dock="Right"
+                TouchUp="LessonContainer_TouchUp"
+                ManipulationDelta="LessonContainer_ManipulationDelta"
+                Background="{StaticResource ContentBackgroundBrush}">
+
+                <Canvas Panel.ZIndex="10" ClipToBounds="True">
+
+                    <!-- RadialMenu -->
+                    <Controls:RadialMenus
+                        x:Name="RadialMenu"
+                        Panel.ZIndex="10"
+                        DataContext="{Binding DataContext, ElementName=LayerStack}"
+                        Canvas.Left="{Binding RadialMenuState.LeftPosition}"
+                        Canvas.Top="{Binding RadialMenuState.TopPosition}" />
+
+                    <!-- RadialMenu "State" Button -->
+                    <Controls:RadialMenuStateButton
+                        x:Name="RadialMenuOpenButton"
+                        Tag="{Binding ElementName=LessonContainer}"
+                        Panel.ZIndex="0"
+                        DataContext="{Binding DataContext, ElementName=LayerStack}"
+                        Canvas.Top="140"
+                        Canvas.Right="155" />
+
+                </Canvas>
+
+                <!-- ScrollViewer -->
+                <Controls:TouchScrollViewer
+                    x:Name="LessonContainer"
+                    Panel.ZIndex="0"
+                    IsContentManipulationEnabled="True"
+                    HorizontalOffset="{Binding DataContext.Viewport.HorizontalOffset, ElementName=LayerStack, Mode=TwoWay}"
+                    VerticalOffset="{Binding DataContext.Viewport.VerticalOffset, ElementName=LayerStack, Mode=TwoWay}">
+
+                    <Grid
+                        x:Name="LessonContent"
+                        MouseRightButtonUp="LessonContent_MouseRightButtonUp"
+                        TouchDown="LessonContainer_TouchDown"
+                        TouchMove="LessonContainer_TouchMove"
+                        StylusDown="LessonContainer_StylusDown"
+                        Stylus.IsFlicksEnabled="False"
+                        Stylus.IsPressAndHoldEnabled="False"
+                        Stylus.IsTapFeedbackEnabled="False"
+                        Stylus.IsTouchFeedbackEnabled="False">
+
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="PreviewTouchDown">
+                                <i:InvokeCommandAction
+                                    Command="{Binding DataContext.CloseRadialMenu, ElementName=LayerStack}" />
+                            </i:EventTrigger>
+                            <i:EventTrigger EventName="PreviewMouseDown">
+                                <i:InvokeCommandAction
+                                    Command="{Binding DataContext.CloseRadialMenu, ElementName=LayerStack}" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+
+                        <!-- Lesson scale -->
+                        <Grid.LayoutTransform>
+                            <ScaleTransform
+                                ScaleX="{Binding DataContext.Viewport.Scale, ElementName=LayerStack}"
+                                ScaleY="{Binding DataContext.Viewport.Scale, ElementName=LayerStack}" />
+                        </Grid.LayoutTransform>
+
+                        <!-- Drawing bound -->
+                        <Controls:DrawingAreaBackground
+                            x:Name="DrawingAreaBound"
+                            Panel.ZIndex="0"
+                            Width="2800"
+                            Height="2000" />
+
+                        <!-- Layer Stack -->
+                        <Controls:LayerStack
+                            x:Name="LayerStack"
+                            Panel.ZIndex="10"
+                            DataContext="{Binding LayerStackDC}"
+                            Width="{Binding Width, ElementName=DrawingAreaBound}"
+                            Height="{Binding Height, ElementName=DrawingAreaBound}" />
+
+                    </Grid>
+                </Controls:TouchScrollViewer>
+
+            </Grid>
+
+        </DockPanel>
+
+    </DockPanel>
+
+</Page>

@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="Nine.Views.Controls.BarChart"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:chart="clr-namespace:De.TorstenMandelkow.MetroChart;assembly=De.TorstenMandelkow.MetroChart"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <Grid>
+        <chart:ClusteredColumnChart
+            Background="#FFF"
+            ToolTipFormat="{}Label: {0}, Pourcentage: {3:P2}"
+            Height="500"
+            ChartTitle="{Binding Title}"
+            ChartSubTitle="{Binding SubTitle}"
+            SelectedItem="{Binding Path=SelectedItem, Mode=TwoWay}"
+            Width="{Binding Width}">
+            <chart:ClusteredColumnChart.Series>
+                <chart:ChartSeries
+                    SeriesTitle=" "
+                    DisplayMember="Category"
+                    ValueMember="Number"
+                    ItemsSource="{Binding Path=Answers}" />
+            </chart:ClusteredColumnChart.Series>
+        </chart:ClusteredColumnChart>
+
+    </Grid>
+
+</UserControl>

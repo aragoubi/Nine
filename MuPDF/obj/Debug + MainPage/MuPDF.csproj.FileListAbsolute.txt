@@ -1,0 +1,17 @@
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + MainPage\MuPdf.dll
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + MainPage\MuPdfWrapper.dll
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + MainPage\MuPdfWrapper.pdb
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + MainPage\System.Windows.Interactivity.dll
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + MainPage\System.Windows.Interactivity.xml
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + MainPage\de\System.Windows.Interactivity.resources.dll
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + MainPage\en\System.Windows.Interactivity.resources.dll
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + MainPage\es\System.Windows.Interactivity.resources.dll
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + MainPage\fr\System.Windows.Interactivity.resources.dll
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + MainPage\it\System.Windows.Interactivity.resources.dll
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + MainPage\ja\System.Windows.Interactivity.resources.dll
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + MainPage\ko\System.Windows.Interactivity.resources.dll
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + MainPage\zh-Hans\System.Windows.Interactivity.resources.dll
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\bin\Debug + MainPage\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\obj\Debug + MainPage\MuPDF.csprojResolveAssemblyReference.cache
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\obj\Debug + MainPage\MuPdfWrapper.dll
+C:\Users\4infop1\Desktop\CAMIA\MuPDF\obj\Debug + MainPage\MuPdfWrapper.pdb

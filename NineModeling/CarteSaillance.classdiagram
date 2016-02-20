@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="60e53b5d-6cd0-437d-8f1d-14fd6cb6afbc" name="CarteSaillance" linkedPackageId="2aea835c-d40c-4411-9eba-ec3476a17f19" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="bb840aa7-be8e-43b8-844f-00a947aac8d1">
+      <profileInstance Id="8be91a71-a4ab-4600-81b5-29cdb6ab1f83" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="0cafebbd-cd63-4281-895b-0c4907e2f63c">
+      <profileInstance Id="9730dd91-d76c-4fdb-a414-b6b875f4234a" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="cced581b-e7ce-4548-bfeb-529c98ef9e28" name="SaliencyMap" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4d5b53a7-1456-414d-b210-efc3607795fc" />
+        <ownedOperations>
+          <operation Id="988f07a9-3c24-4361-82c2-3da8c9d06d0e" name="SaliencyMap" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="06af2278-17a3-4cfe-aae0-a296030b24ac" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b8de9e75-92f0-4f82-910f-66a9877ffd8c" name="Layer" direction="In" isUnique="false">
+                  <elementDefinition Id="52da3bfc-87fd-4571-93d8-3b37e59963b3" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="76941613-07dd-4941-81b7-331ebbf82e90" name="generate" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c7a6a7b6-53de-49e2-aa15-d6c7fb8d7c20" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7267ed28-debe-4670-a30b-222cafdf2326" direction="Return">
+                  <elementDefinition Id="1fa5f076-e7c8-4c42-84b2-bed2575dd5cf" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="42d03437-4a16-485c-b541-4959313a9f2a" LastKnownName="Layer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="22a442de-8222-49ba-8897-cb58a3566f95" name="addPoints" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d2b9946e-87fb-4126-a2f0-f7f25d1751b8" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="828a9d49-64c2-4dbe-82ca-900a9235a318" name="List&lt;Point&gt;" direction="In" isUnique="false">
+                  <elementDefinition Id="683e38c3-97e7-4ca0-b54f-6f209c4f9caf" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="42d03437-4a16-485c-b541-4959313a9f2a" name="Layer" isAbstract="false" isLeaf="false" cachedFullName="NineModeling::Layer">
+        <elementDefinition Id="ac74cb2f-3787-4f3a-a501-3cd912b7684b" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="2aea835c-d40c-4411-9eba-ec3476a17f19" name="NineModeling">
+    <elementDefinition Id="9c5cd0fc-c238-4907-8a9b-30f9bd4ae155" />
+  </package>
+</logicalClassDesignerModel>

@@ -1,0 +1,112 @@
+﻿<UserControl x:Class="Nine.Views.Controls.RadialMenuStateButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="45" d:DesignWidth="45">
+
+    <Button
+        TouchDown="Button_TouchDown"
+        TouchUp="Button_TouchUp"
+        Click="Button_Click"
+        Tag="{Binding Tag, RelativeSource={RelativeSource AncestorType=UserControl}}"
+        Height="45"
+        Width="45"
+        Background="#88F4F4F4">
+
+        <Button.Style>
+            <Style TargetType="Button" BasedOn="{StaticResource MetroCircleButtonStyle}">
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding RadialMenuState.IsOpen}" Value="False">
+                        <DataTrigger.EnterActions>
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{x:Static Visibility.Visible}" />
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <DoubleAnimation Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.4" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </DataTrigger.EnterActions>
+                        <DataTrigger.ExitActions>
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0.4"
+                                                                Value="{x:Static Visibility.Collapsed}" />
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.4" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </DataTrigger.ExitActions>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </Button.Style>
+
+        <Grid>
+            <Viewbox Margin="11 10 10 11" Tag="Pencil">
+                <Viewbox.Visibility>
+                    <MultiBinding Converter="{StaticResource ItemsEqualToVisibility}">
+                        <Binding Path="CurrentState.InkingModeAsString" />
+                        <Binding Path="Tag" RelativeSource="{RelativeSource Self}" />
+                    </MultiBinding>
+                </Viewbox.Visibility>
+                <ContentControl Tag="{Binding CurrentDrawingColor}" Style="{DynamicResource DynamicPencilIcon}" />
+            </Viewbox>
+
+            <Viewbox Margin="1 5 5 1" Tag="Highlighter">
+                <Viewbox.Visibility>
+                    <MultiBinding Converter="{StaticResource ItemsEqualToVisibility}">
+                        <Binding Path="CurrentState.InkingModeAsString" />
+                        <Binding Path="Tag" RelativeSource="{RelativeSource Self}" />
+                    </MultiBinding>
+                </Viewbox.Visibility>
+                <ContentControl Tag="{Binding CurrentDrawingColor}" Style="{DynamicResource DynamicHighlighterIcon}" />
+            </Viewbox>
+
+            <Viewbox Margin="10 11 11 10" Tag="StrokeEraser">
+                <Viewbox.Visibility>
+                    <MultiBinding Converter="{StaticResource ItemsEqualToVisibility}">
+                        <Binding Path="CurrentState.InkingModeAsString" />
+                        <Binding Path="Tag" RelativeSource="{RelativeSource Self}" />
+                    </MultiBinding>
+                </Viewbox.Visibility>
+                <ContentControl Tag="{Binding CurrentDrawingColor}" Style="{DynamicResource DynamicEraserIcon}" />
+            </Viewbox>
+
+            <Viewbox Margin="10 11 11 10" Tag="PointEraser">
+                <Viewbox.Visibility>
+                    <MultiBinding Converter="{StaticResource ItemsEqualToVisibility}">
+                        <Binding Path="CurrentState.InkingModeAsString" />
+                        <Binding Path="Tag" RelativeSource="{RelativeSource Self}" />
+                    </MultiBinding>
+                </Viewbox.Visibility>
+                <ContentControl Tag="{Binding CurrentDrawingColor}" Style="{DynamicResource DynamicEraserIcon}" />
+            </Viewbox>
+
+            <Viewbox Margin="7 7 5 7" Tag="Pointer">
+                <Viewbox.Visibility>
+                    <MultiBinding Converter="{StaticResource ItemsEqualToVisibility}">
+                        <Binding Path="CurrentState.InkingModeAsString" />
+                        <Binding Path="Tag" RelativeSource="{RelativeSource Self}" />
+                    </MultiBinding>
+                </Viewbox.Visibility>
+                <ContentControl Tag="{Binding CurrentDrawingColor}" Style="{DynamicResource DynamicPointerIcon}" />
+            </Viewbox>
+
+            <Viewbox Margin="7" Tag="Selection">
+                <Viewbox.Visibility>
+                    <MultiBinding Converter="{StaticResource ItemsEqualToVisibility}">
+                        <Binding Path="CurrentState.InkingModeAsString" />
+                        <Binding Path="Tag" RelativeSource="{RelativeSource Self}" />
+                    </MultiBinding>
+                </Viewbox.Visibility>
+                <ContentControl Tag="{Binding CurrentDrawingColor}" Style="{DynamicResource DynamicSelectionIcon}" />
+            </Viewbox>
+
+        </Grid>
+    </Button>
+
+</UserControl>

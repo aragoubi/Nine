@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D9617781-768C-4367-A98A-A5E6E731A2E7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nine</RootNamespace>
+    <AssemblyName>NineModels</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug + YSchool|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug + YSchool\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug + MainPage|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug + MainPage\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug + YSchool + MainPage|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug + YSchool + MainPage\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release + YSchool|AnyCPU'">
+    <OutputPath>bin\Release + YSchool\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseModel.cs" />
+    <Compile Include="Export.cs" />
+    <Compile Include="Layers\Components\BaseComponent.cs" />
+    <Compile Include="Layers\Components\Charts\BarChart.cs" />
+    <Compile Include="Layers\Components\Charts\SaliencyMap.cs" />
+    <Compile Include="Layers\GraphicalQuestionLayer.cs" />
+    <Compile Include="Layers\Components\Draggables\QCMBullet.cs" />
+    <Compile Include="Layers\Components\Draggables\QCUBullet.cs" />
+    <Compile Include="Layers\Components\Draggables\TextualComponent.cs" />
+    <Compile Include="Layers\BasicLayer.cs" />
+    <Compile Include="Layers\GraphicalAnswerLayer.cs" />
+    <Compile Include="Layers\IQuestionLayer.cs" />
+    <Compile Include="Layers\IAnswerLayer.cs" />
+    <Compile Include="Layers\QuizQuestionLayer.cs" />
+    <Compile Include="Layers\QuizAnswerLayer.cs" />
+    <Compile Include="Layers\QuizLayer.cs" />
+    <Compile Include="Lessons\Contents\BasicContent.cs" />
+    <Compile Include="Lessons\Contents\Processing\ExerciseProcessing.cs" />
+    <Compile Include="Lessons\Contents\Processing\GraphicalProcessing.cs" />
+    <Compile Include="Lessons\Contents\Content.cs" />
+    <Compile Include="Lessons\Contents\Processing\QuizMode.cs" />
+    <Compile Include="Lessons\Contents\Processing\QuizProcessing.cs" />
+    <Compile Include="Lessons\Contents\Processing\UnrestrictedProcessing.cs" />
+    <Compile Include="Lessons\Contents\QuizContent.cs" />
+    <Compile Include="Lessons\Holders\BasicHolder.cs" />
+    <Compile Include="Layers\Components\Draggables\Anchor.cs" />
+    <Compile Include="Layers\Components\Draggables\AnchoredTag.cs" />
+    <Compile Include="Layers\Components\Draggables\DraggableComponent.cs" />
+    <Compile Include="Layers\Components\Draggables\Picture.cs" />
+    <Compile Include="Layers\Components\Draggables\QuizBullet.cs" />
+    <Compile Include="Layers\Components\Draggables\TextFrame.cs" />
+    <Compile Include="Layers\Components\Links\LayerLink.cs" />
+    <Compile Include="Layers\Components\Links\ILink.cs" />
+    <Compile Include="Layers\Components\Links\URLLink.cs" />
+    <Compile Include="Layers\Components\Point.cs" />
+    <Compile Include="Layers\Components\Strokes\DA\Brushes.cs" />
+    <Compile Include="Layers\Components\Strokes\DA\Color.cs" />
+    <Compile Include="Layers\Components\Strokes\DA\DrawingAttributes.cs" />
+    <Compile Include="Layers\Components\Strokes\Stroke.cs" />
+    <Compile Include="Layers\Components\Strokes\StrokePoint.cs" />
+    <Compile Include="Layers\ParallelLayer.cs" />
+    <Compile Include="Layers\AbstractLayer.cs" />
+    <Compile Include="Lessons\Contents\ParallelContent.cs" />
+    <Compile Include="Lessons\Contents\ExerciseContent.cs" />
+    <Compile Include="Lessons\Contents\GlobalNotesContent.cs" />
+    <Compile Include="Lessons\Contents\SlideContent.cs" />
+    <Compile Include="Lessons\Holders\ExerciseHolder.cs" />
+    <Compile Include="Lessons\Holders\GlobalNotesHolder.cs" />
+    <Compile Include="Lessons\Holders\Holder.cs" />
+    <Compile Include="Lessons\Holders\ParallelHolder.cs" />
+    <Compile Include="Lessons\Lesson.cs" />
+    <Compile Include="Lessons\Holders\SlideHolder.cs" />
+    <Compile Include="Lessons\Tag.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Roles\Role.cs" />
+    <Compile Include="Sharing\AnswerLayer.cs" />
+    <Compile Include="Sharing\AskingSlide.cs" />
+    <Compile Include="Sharing\SharedBasicLayer.cs" />
+    <Compile Include="Sharing\SharedExercise.cs" />
+    <Compile Include="Sharing\SharedExerciseLayer.cs" />
+    <Compile Include="Sharing\SharedGraphicExercise.cs" />
+    <Compile Include="Sharing\SharedLayer.cs" />
+    <Compile Include="Sharing\SharedParallelLayer.cs" />
+    <Compile Include="Sharing\SharedLesson.cs" />
+    <Compile Include="Sharing\SharedPageIndex.cs" />
+    <Compile Include="Sharing\SharedPointer.cs" />
+    <Compile Include="Sharing\SharedQuizExercise.cs" />
+    <None Include="ClassDiagram.cd" />
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

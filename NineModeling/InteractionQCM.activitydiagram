@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="00879ae1-fbe1-4d6e-9014-11b135e48f87" name="Activity1" linkedPackageId="4fc2bff7-6c02-433a-ac4e-0c71b6c54468" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="17c5ae92-6ef8-4f9a-b416-b7e45f9f9f73">
+      <elementDefinition Id="fa59cb69-94d6-4cf5-8fae-742dc96b79c3" />
+      <body>Création d'un QCM par l'enseignant en direct</body>
+    </comment>
+    <comment Id="a051bad7-61f8-4810-ae91-8cc89a06d9ab">
+      <elementDefinition Id="b8dfa120-9ef7-4dcf-a7e3-660fc19e04a3" />
+      <body>Etudiant</body>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="a31b1e8f-1507-46dc-b7ed-86c6f5593e02" name="Activity1" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="9b1bd7bf-f11e-42f5-ba41-88a03049fbf8" />
+        <nodes>
+          <initialNode Id="cb8ff2e4-db93-4ae4-8393-197599cce4bf" name="Initial1" isLeaf="false">
+            <elementDefinition Id="369b45a8-40a5-42f7-8e16-d18763d90a6a" />
+            <flowNodeTargets>
+              <controlFlow Id="a52a196b-5ee6-49ff-ae05-5704a1fbca1e" isLeaf="false">
+                <opaqueActionMoniker Id="687cc511-3291-4210-969f-99de859609e1" LastKnownName="Créer un QCM" />
+                <elementDefinition Id="04911cf9-c161-400e-abaf-cde6478c0e0a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="687cc511-3291-4210-969f-99de859609e1" name="Créer un QCM" isLeaf="false">
+            <elementDefinition Id="beb88f00-6238-4d8e-9d23-6530493844f5" />
+            <flowNodeTargets>
+              <controlFlow Id="7e49eab8-ab58-4edb-aa83-53dde0b3ef69" isLeaf="false">
+                <opaqueActionMoniker Id="0c5a52d6-700a-43aa-9937-9365db37ce26" LastKnownName="Ajouter un choix" />
+                <elementDefinition Id="5fd97434-46e6-4f5d-ad20-84e1bf5aee42" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="0c5a52d6-700a-43aa-9937-9365db37ce26" name="Ajouter un choix" isLeaf="false">
+            <elementDefinition Id="9c6b8d95-e7a9-4013-a58a-2804414833cb" />
+            <flowNodeTargets>
+              <controlFlow Id="0ceb653a-bd81-49a2-a806-859e9b176278" isLeaf="false">
+                <opaqueActionMoniker Id="a46905c5-3834-422f-99db-096bedb8338b" LastKnownName="Soumettre aux étudiants" />
+                <elementDefinition Id="eb81d9c8-90b7-4a16-863c-bb9c902e6be4" />
+              </controlFlow>
+              <controlFlow Id="2ffdfbef-494f-42d6-9e55-d9cc6cbfe0ee" isLeaf="false">
+                <opaqueActionMoniker Id="0c5a52d6-700a-43aa-9937-9365db37ce26" LastKnownName="Ajouter un choix" />
+                <elementDefinition Id="9dd24140-ecea-473b-bb2c-97a6c1a5184a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="a46905c5-3834-422f-99db-096bedb8338b" name="Soumettre aux étudiants" isLeaf="false">
+            <elementDefinition Id="99cbfe74-675f-44cb-865b-19c2c24014bb" />
+            <objectFlowTargets>
+              <objectFlow Id="08d42420-b27f-4b63-b784-905055bf3231" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="e39bf5e3-f4c3-42f2-a062-f6894dedf852" LastKnownName="Diffusion du QCM" />
+                <elementDefinition Id="315a01b8-e529-48eb-a0d1-143a99334770" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <opaqueAction Id="13a6e818-badb-45aa-8b01-845eef2b9336" name="Récupérer les résultats" isLeaf="false">
+            <elementDefinition Id="fa798e01-4c7b-4105-ae79-a3fa13acebf0" />
+            <objectFlowTargets>
+              <objectFlow Id="da56eae0-ba8e-41ae-8c58-d607e1b3f381" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="1e5a7203-103e-4936-a57f-9f3bd03e11fe" LastKnownName="Synthèse visuelle des résultats" />
+                <elementDefinition Id="8cb1b734-f3ca-440a-85b0-d15b575f4503" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <objectNode Id="e39bf5e3-f4c3-42f2-a062-f6894dedf852" name="Diffusion du QCM" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="3431d22e-d331-4823-a678-ebc5f2baeede" />
+            <objectFlowTargets>
+              <objectFlow Id="9b6a18d6-9169-4717-8601-fecf5ef5f018" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="0e7e9c95-aaab-4e92-aa50-a06317e37dcc" LastKnownName="Cocher une case" />
+                <elementDefinition Id="277194ed-543d-44d0-bf14-fee4363593f2" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="02ba8a98-2255-42a6-8d21-6287687fb40d" name="2147483647" value="2147483647">
+                <elementDefinition Id="8a95d460-8f3a-4993-9c9f-476661fc30f3" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="1e5a7203-103e-4936-a57f-9f3bd03e11fe" name="Synthèse visuelle des résultats" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="b0214c48-52b2-41e8-a962-04d9fe43305a" />
+            <objectFlowTargets>
+              <objectFlow Id="ec90e4e3-f9a2-4ef6-8b9d-20fe5c2dc839" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <activityFinalNodeMoniker Id="82bab31c-7602-46f5-9d47-4ec58422d15a" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="ec66ba14-8adc-49b8-90d2-5c0596847553" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="4e7273b3-8812-4731-a7ea-8f47e29df5f4" name="2147483647" value="2147483647">
+                <elementDefinition Id="ef695971-04e3-47ff-883a-0d70d580ea6f" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <activityFinalNode Id="82bab31c-7602-46f5-9d47-4ec58422d15a" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="107e0e9b-61f1-45cf-ad25-5f020df5dba0" />
+          </activityFinalNode>
+          <opaqueAction Id="0e7e9c95-aaab-4e92-aa50-a06317e37dcc" name="Cocher une case" isLeaf="false">
+            <elementDefinition Id="3a29e345-cf07-4a0c-bd19-bdf5a4873b3b" />
+            <flowNodeTargets>
+              <controlFlow Id="b84dce63-cb8b-4a70-86c2-b47e6578386f" isLeaf="false">
+                <opaqueActionMoniker Id="654c59b9-e168-4747-87ed-b41aae7bcdb4" LastKnownName="Valider le formulaire" />
+                <elementDefinition Id="92aa693e-a289-4fbe-901c-73b366565bf1" />
+              </controlFlow>
+              <controlFlow Id="ce051249-5de8-4ea8-ade0-f20720c3bb49" isLeaf="false">
+                <opaqueActionMoniker Id="0e7e9c95-aaab-4e92-aa50-a06317e37dcc" LastKnownName="Cocher une case" />
+                <elementDefinition Id="0921c7c6-edd7-4412-b157-4f39fc97cdd7" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <objectNode Id="53944143-0535-49b4-a1d5-329ff294911a" name="Communication de la réponse" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="b10e9ffe-a25e-4e22-872c-35b8bab277e9" />
+            <objectFlowTargets>
+              <objectFlow Id="3d95ea43-bb39-4862-829d-c797de3118ed" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="13a6e818-badb-45aa-8b01-845eef2b9336" LastKnownName="Récupérer les résultats" />
+                <elementDefinition Id="95b9e6ba-3394-4f34-9ba5-80278db83c99" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="158f9f2d-e589-4321-bb9a-9bc91f06b076" name="2147483647" value="2147483647">
+                <elementDefinition Id="fa598a5f-39dc-4006-96c4-6d3b5b52d416" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="654c59b9-e168-4747-87ed-b41aae7bcdb4" name="Valider le formulaire" isLeaf="false">
+            <elementDefinition Id="245052b0-8624-4263-a3a3-5588c874d23b" />
+            <objectFlowTargets>
+              <objectFlow Id="dcd3758f-01a1-4b37-8e99-40dc7be51e8b" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="53944143-0535-49b4-a1d5-329ff294911a" LastKnownName="Communication de la réponse" />
+                <elementDefinition Id="81b38826-8912-4798-8776-6b9acac8d1c9" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="4fc2bff7-6c02-433a-ac4e-0c71b6c54468" name="Modelisation">
+    <elementDefinition Id="6be4d209-fca6-444d-b908-055f8648b195" />
+    <profileInstances>
+      <packageHasProfileInstances Id="78d3757d-217a-458d-96a8-7dbbbd537a34">
+        <profileInstance Id="ce9a8ba5-ad7b-4637-9889-657a71ba366a" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="1f7c3f2d-5d24-4b03-9123-05da3083cb64">
+        <profileInstance Id="1179e120-c6f3-4bec-8f5c-0df77e8055ad" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</activityRootModel>

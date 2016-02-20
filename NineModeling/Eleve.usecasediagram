@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="a0ab52bc-8dab-4ef1-9957-348751262692" name="Eleve" linkedPackageId="82b79d96-4f10-4291-8aaa-b5026b2a4c99" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="81d1d820-f331-4a87-aa86-b3bd2cc45dc8" name="Eleve" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3ed599ee-fee2-4db4-b134-28233aebec0a" />
+        <targetEnds>
+          <association Id="8f68f7f4-ccc5-49ac-8dbb-b50c70525882" isDerived="false" sourceEndRoleName="Eleve" targetEndRoleName="Poser une question" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a537f53a-d544-4dac-b491-e8fdfa93149c" LastKnownName="Poser une question au professeur" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2268806b-5931-4ce4-a14c-148aef50e7ba" name="Eleve" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7c21bd53-db67-49b8-a19d-d418cbae8cb8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d1718445-6c99-46c1-9cf8-ce7fc636e07b" name="Poser une question" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="83a7de29-6286-4907-a4c7-a320ff7f5d1c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ea5d8cb3-fe2a-4338-8be6-788ff805640c" />
+          </association>
+          <association Id="a4ec434f-3309-45ca-8790-c01bca22212c" isDerived="false" sourceEndRoleName="Eleve" targetEndRoleName="Prendre des notes manuscrites" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="7efc9f52-fbb8-4434-8f21-7381e85f132e" LastKnownName="Prendre des notes" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dac96631-3119-443d-b803-11ccd155454c" name="Eleve" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8e9ba09f-1581-4cc7-8a03-7bef5b3dfb86" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="901081eb-d426-4118-80cf-cff11a11f241" name="Prendre des notes manuscrites" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8aa4ee2a-4f4a-46c6-a761-bf3f4a805cd9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c1351c89-de92-4150-bec3-e73f160939df" />
+          </association>
+          <association Id="dc3221b8-21a5-42c3-af04-cc0492941ce9" isDerived="false" sourceEndRoleName="Eleve" targetEndRoleName="Modifier les notes" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4ac2d612-63f7-469f-a733-0e65c4a045d3" LastKnownName="Modifier les éléments sur le calque" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9888ee2d-373c-4beb-aeeb-aaf199c9b164" name="Eleve" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="15093b8a-6aac-431d-a32f-2ad6d90d0e69" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f653d2ec-07f0-4ddd-a2e8-b7c4122cdc3f" name="Modifier les notes" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8c5b4245-d142-4f44-9cc2-1d428ebb78cf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f4a541ab-32b7-47d3-830f-50fbfee5c357" />
+          </association>
+          <association Id="2ff4e168-b385-45db-a632-41b030abe59d" isDerived="false" sourceEndRoleName="Eleve" targetEndRoleName="Pointer sur la slide de l'enseignant" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="20f89d1d-65c7-476e-a6c7-3f9861dda723" LastKnownName="Pointer sur la slide de l'enseignant" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ef88a22b-7d84-4246-93fd-a7e545113345" name="Eleve" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="364fc5db-48a9-40f3-9068-f852fe5852f3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="595b7904-21e6-4f1f-b068-aad6a4405517" name="Pointer sur la slide de l'enseignant" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ca488856-990f-47fc-b204-fae1b1334215" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5194fd84-ff97-4725-a2c2-500235cb5585" />
+          </association>
+          <association Id="fd126b12-9922-43a8-9626-1e3770b9532f" isDerived="false" sourceEndRoleName="Eleve" targetEndRoleName="Gestion des calques" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="abdbb2b4-34f2-425e-b1aa-c143dca519af" LastKnownName="Gérer des calques" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fefb4df8-4d1b-43ea-8726-2793f083828c" name="Eleve" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="217eb853-0679-4428-8b5e-88c96d204291" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d327bb03-426e-41cc-904b-190d0cde3991" name="Gestion des calques" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ff1c8922-7a36-4fa8-ac99-e1ca4b807b20" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="927e9a82-939e-4d19-8935-5d61a4c6350a" />
+          </association>
+          <association Id="89286fbb-ee86-4b04-9378-48794f0aef64" isDerived="false" sourceEndRoleName="Eleve" targetEndRoleName="Naviguer dans les slides" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="36274dfd-6b98-4176-8eba-42e40de07f4e" LastKnownName="Naviguer dans les slides" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e4bde3a5-ffde-4afa-9661-46c3c53d7a1f" name="Eleve" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4dd22587-e05b-48a2-bd1c-4ff6c87e3c72" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="da4f7a7d-af4b-4c96-bce3-283e212f35a6" name="Naviguer dans les slides" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="46daa73a-fc7f-49fe-9514-86711e4e22bc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9788fb42-a8b4-4445-ba3c-2b57fb9b7f6f" />
+          </association>
+          <association Id="6fee41b6-78a1-442c-be63-e488dbd6aa4c" isDerived="false" sourceEndRoleName="Eleve" targetEndRoleName="Manipuler le document" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f4cf6090-5a24-4bcd-a5a4-e31478f57928" LastKnownName="Manipuler le document" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="49513034-dea1-46e0-95fa-613b1a465528" name="Eleve" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="671265ce-a8c6-4395-ab94-5aeee3b2c70a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="32d24682-9bb8-4512-bf57-0426684087ce" name="Manipuler le document" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="dead4a79-db37-4e97-8509-8d01dfe25a7b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c9a228f7-e52e-494b-9685-409db65c0124" />
+          </association>
+          <association Id="8971b81a-00f8-410b-a696-ecf0cdd5b67a" isDerived="false" sourceEndRoleName="Eleve" targetEndRoleName="Répondre aux questions de l'enseignant" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="128260fe-b533-4820-87db-460c6b1dda1c" LastKnownName="Répondre aux questions de l'enseignant" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f52cc6f7-fd73-4fec-9cad-ba8a3469dd68" name="Eleve" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="07fa93ab-b757-4a19-bd65-e436d7d7fcec" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fa525a40-7c62-4dd3-9c83-7775b1996ba9" name="Répondre aux questions de l'enseignant" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1caa2a22-c8ff-4a22-ab0f-f54a3ea8a75f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6c466dad-9157-46ec-acf4-1232c9bebda9" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7efc9f52-fbb8-4434-8f21-7381e85f132e" name="Prendre des notes" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="dc594a56-d832-4000-a479-1cd22addd2e3" />
+        <additions>
+          <include Id="8767fe39-b297-4615-b862-e0d06f576051">
+            <useCaseMoniker Id="1ef6e6c3-549a-45b5-a8fc-0dd745b92d8c" LastKnownName="Passer en mode &quot;Ajout de notes&quot;" />
+            <elementDefinition Id="51744e40-6228-48ef-84b1-dbba9f6e4dcd" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a537f53a-d544-4dac-b491-e8fdfa93149c" name="Poser une question au professeur" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8987435e-810d-45af-a4b8-b65244026623" />
+        <additions>
+          <include Id="25f52c34-4d54-4a97-874f-06513ca4a033">
+            <useCaseMoniker Id="aaa49f23-fea2-4d74-9c6a-ff4740e1f1a1" LastKnownName="Ecrire la question sur la tablette" />
+            <elementDefinition Id="0b22098a-367e-4dd6-bc62-d04bb65fedfc" />
+          </include>
+          <include Id="c8b06eca-1f13-42f4-ad54-c92f81b6b0cc">
+            <useCaseMoniker Id="ddb89c63-5f93-4992-8044-31db4b8a32ae" LastKnownName="Envoyer la question au professeur" />
+            <elementDefinition Id="ef6efc40-482c-460a-b109-9ab58d02437c" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="247b896b-441e-491d-8c93-f1bc4d51586f" name="Modifier l'encre " isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fb4b9f77-1221-4104-91df-e2987e07d571" />
+        <extendedCases>
+          <extend Id="1e1f0793-edea-4552-9615-3aba6bd02c74">
+            <useCaseMoniker Id="7efc9f52-fbb8-4434-8f21-7381e85f132e" LastKnownName="Prendre des notes" />
+            <elementDefinition Id="90507f7c-1ed4-471b-883a-6972feaa0f62" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="fca64dbf-3fba-4501-b852-c2e85d1cd292" name="Changer la couleur" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="19a4827d-18be-447d-9982-3e59cd151501" />
+        <extendedCases>
+          <extend Id="5a42af67-2dad-4342-90e5-1280bd1ef027">
+            <useCaseMoniker Id="247b896b-441e-491d-8c93-f1bc4d51586f" LastKnownName="Modifier l'encre " />
+            <elementDefinition Id="a45deb47-f7fc-430a-ad0e-214e1d6d47ae" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="eb091fe9-353e-4676-bab4-651ccf978331" name="Changer l'épaisseur" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4764466f-ace6-435a-ad1e-9faa47bcc778" />
+        <extendedCases>
+          <extend Id="4115ba62-bc34-417c-ba5f-0ed835d5e66c">
+            <useCaseMoniker Id="247b896b-441e-491d-8c93-f1bc4d51586f" LastKnownName="Modifier l'encre " />
+            <elementDefinition Id="71edb4fe-19bc-4244-be0d-264c21531795" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ef5a400d-9996-4190-9753-8fa24eab25f5" name="Ajouter une balise" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="71a5052a-19c9-44c4-8ea4-8082edaa6444" />
+        <extendedCases>
+          <extend Id="cb997edf-1967-4cca-b77e-484c88915c3e">
+            <useCaseMoniker Id="4ac2d612-63f7-469f-a733-0e65c4a045d3" LastKnownName="Modifier les éléments sur le calque" />
+            <elementDefinition Id="64bab853-ab3f-4184-be66-1dc068f085ed" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include Id="8b1f55d3-2493-45b8-846e-750eaa48d19c">
+            <useCaseMoniker Id="4f56e768-97d5-4cbd-a8d1-490e9d7bdb52" LastKnownName="Choisir la balise" />
+            <elementDefinition Id="c7fe955e-2c97-42de-8dfc-3d76b48f2731" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7940b545-a5a0-4b95-b167-98634deb45a6" name="Créer une zone de texte" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4c8fd8f4-90fa-4cbf-ac3b-4c1b20f25a30" />
+        <extendedCases>
+          <extend Id="05807fb7-067c-425e-b133-d74fc2f5cd91">
+            <useCaseMoniker Id="7efc9f52-fbb8-4434-8f21-7381e85f132e" LastKnownName="Prendre des notes" />
+            <elementDefinition Id="2b693792-586a-4696-9bf4-3288a403d45e" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="73d4abfc-faa5-4490-911c-d40c6479b478" name="Ajouter un média extérieur" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="06907dfe-8f86-4203-8e25-67799e1964bd" />
+        <extendedCases>
+          <extend Id="07e211f2-689f-4ac9-9969-0babb1665f72">
+            <useCaseMoniker Id="7efc9f52-fbb8-4434-8f21-7381e85f132e" LastKnownName="Prendre des notes" />
+            <elementDefinition Id="5f90a681-11e9-4f13-b791-9a63b61ab152" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b1ce3e72-ae76-4977-b7f9-37f9167eac8b" name="Ajouter une image" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="08a3b846-83bd-4de0-bbc7-1f0719f4a5c8" />
+        <extendedCases>
+          <extend Id="9aebe58f-8c79-4453-b3c0-01ccb675bc1e">
+            <useCaseMoniker Id="73d4abfc-faa5-4490-911c-d40c6479b478" LastKnownName="Ajouter un média extérieur" />
+            <elementDefinition Id="307d6179-36bc-4087-91e5-27af701b52e5" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="68bf6174-7033-42b8-8fec-bdb66cf9d3f6" name="Ajouter un lien" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="298797d9-39d1-4395-91a8-3905991727c3" />
+        <extendedCases>
+          <extend Id="692c8356-e495-4e56-af5a-9301bdc2987d">
+            <useCaseMoniker Id="73d4abfc-faa5-4490-911c-d40c6479b478" LastKnownName="Ajouter un média extérieur" />
+            <elementDefinition Id="245fa54f-d2fb-4f9f-b11b-e59b501fea33" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="240c3ac4-ee2a-4929-9d65-00ef54f1faa8" name="Changer le formatage du texte" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ca1f7f6e-da92-44b8-ac08-43a480ff45e2" />
+        <extendedCases>
+          <extend Id="f1bf7a1d-3004-41dc-8563-0b349e6ad319">
+            <useCaseMoniker Id="7940b545-a5a0-4b95-b167-98634deb45a6" LastKnownName="Créer une zone de texte" />
+            <elementDefinition Id="c5238cb5-6657-4b4b-a628-23d44ed0797c" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4f56e768-97d5-4cbd-a8d1-490e9d7bdb52" name="Choisir la balise" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6c60e1d0-1d9f-4929-92a5-45bc3d4f2ead" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4ac2d612-63f7-469f-a733-0e65c4a045d3" name="Modifier les éléments sur le calque" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="eb5b77e7-774d-4e44-8d75-8fc806ee17d2" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="df0cf082-96f6-4509-9ada-e6574e72b62d" name="Couper/Copier/Coller" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="06f1638c-e62a-4b09-9068-fbbcb416957b" />
+        <extendedCases>
+          <extend Id="84144eb4-a430-45e5-9e54-01a865f9d610">
+            <useCaseMoniker Id="4ac2d612-63f7-469f-a733-0e65c4a045d3" LastKnownName="Modifier les éléments sur le calque" />
+            <elementDefinition Id="ed6b2edb-4c47-4ce0-a173-8582cc323aca" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="20f89d1d-65c7-476e-a6c7-3f9861dda723" name="Pointer sur la slide de l'enseignant" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="df26e15b-42b9-41e0-b3b9-5d3eb1a605d5" />
+        <additions>
+          <include Id="841f3b2e-b22d-4795-bf70-5b7c3e6302aa">
+            <useCaseMoniker Id="4ff124e6-a3de-48af-b7f7-764f0e9e4666" LastKnownName="Pointer en utilisant le stylet" />
+            <elementDefinition Id="d0b2d57a-f755-4ab3-add1-6117e03fff77" />
+          </include>
+          <include Id="22231475-875b-4d7f-9b87-e241ac994fd6">
+            <useCaseMoniker Id="858f5bc8-2382-4f36-8b37-4b2665d24f13" LastKnownName="Demander l'autorisation" />
+            <elementDefinition Id="05fe662c-846c-4fec-b09a-f25ba4cbe221" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="858f5bc8-2382-4f36-8b37-4b2665d24f13" name="Demander l'autorisation" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="94feb323-a092-47a3-a808-6ee4fd2f7f5d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4ff124e6-a3de-48af-b7f7-764f0e9e4666" name="Pointer en utilisant le stylet" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b901e827-98df-44ac-8cc6-a053a95863a2" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="aaa49f23-fea2-4d74-9c6a-ff4740e1f1a1" name="Ecrire la question sur la tablette" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ba727436-14ea-4b86-997c-e8a2bba4c51b" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ddb89c63-5f93-4992-8044-31db4b8a32ae" name="Envoyer la question au professeur" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f6ce105d-65aa-40c5-9fee-422e120badd9" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="abdbb2b4-34f2-425e-b1aa-c143dca519af" name="Gérer des calques" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5a2574eb-7abe-4029-9025-1e90f78880b0" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ecf7f6e0-693f-43ea-b9b6-cd8e626813b3" name="Supprimer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e895e80e-7ee8-4178-af41-2e83e6a2366b" />
+        <extendedCases>
+          <extend Id="17dc05b4-e83c-42c6-a33d-c1c179b8f893">
+            <useCaseMoniker Id="4ac2d612-63f7-469f-a733-0e65c4a045d3" LastKnownName="Modifier les éléments sur le calque" />
+            <elementDefinition Id="72a9ecbf-2130-495e-9643-f38fd9c695fe" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f79f6641-3a00-4c2c-90b5-1bd4d441b6ff" name="Activer/Désactiver synchronisation enseignant" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d4f08c77-05cf-41a5-8a88-d287d91cb0e4" />
+        <extendedCases>
+          <extend Id="2064a210-ab05-44d3-9bd4-7b0454202e5d">
+            <useCaseMoniker Id="36274dfd-6b98-4176-8eba-42e40de07f4e" LastKnownName="Naviguer dans les slides" />
+            <elementDefinition Id="76ac4815-0a39-43c5-8681-5124b7e347ff" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f459941b-a6b0-4ff2-9d82-22f238487ab6" name="Créer un calque" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7d0a7933-f464-4406-87f2-04661f3c40e1" />
+        <extendedCases>
+          <extend Id="14925e10-2f9b-4d97-9bf6-ca2d92fde2a9">
+            <useCaseMoniker Id="abdbb2b4-34f2-425e-b1aa-c143dca519af" LastKnownName="Gérer des calques" />
+            <elementDefinition Id="437ca8d4-1054-44fe-88dc-4a8910aecd0d" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b4fd232f-cf60-42d3-a3bc-4ec882b49d03" name="Afficher un calque" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1fd7589c-9e3c-4e2f-9624-7e01d23fadfb" />
+        <extendedCases>
+          <extend Id="88615c22-24c5-4648-baa1-91eda6b451e8">
+            <useCaseMoniker Id="abdbb2b4-34f2-425e-b1aa-c143dca519af" LastKnownName="Gérer des calques" />
+            <elementDefinition Id="c869a6e6-6030-492d-87e9-902176f65222" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2e997e38-ef84-4c89-afa3-f09ed580ba09" name="Partager un calque" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fb33aa14-dc48-49c0-9cbd-6cc1d4ea22da" />
+        <extendedCases>
+          <extend Id="dc6d5fa5-3e85-423e-9509-9b3f5362107a">
+            <useCaseMoniker Id="abdbb2b4-34f2-425e-b1aa-c143dca519af" LastKnownName="Gérer des calques" />
+            <elementDefinition Id="29bed142-fc99-44b6-83d2-f5ee92848bfd" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="36274dfd-6b98-4176-8eba-42e40de07f4e" name="Naviguer dans les slides" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="180230ac-e6c2-4ec6-8d18-cc4b47b2f676" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f9602a02-2069-479d-a91b-e8f3b93ea550" name="Aller sur la slide précédente/suivante" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ac408826-0682-41a2-af68-5ceeb93b6302" />
+        <extendedCases>
+          <extend Id="8d291ece-fdd1-4f0e-92ec-d7e2a23fb165">
+            <useCaseMoniker Id="36274dfd-6b98-4176-8eba-42e40de07f4e" LastKnownName="Naviguer dans les slides" />
+            <elementDefinition Id="6a62c908-a3ef-4433-9abe-981b23cdead0" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="704a113a-801d-484f-8d66-738bed354e09" name="Verrouiller un calque" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e5e7e8d0-f655-4251-a20e-e33758cc0adc" />
+        <extendedCases>
+          <extend Id="9f49594c-d0c7-4869-8d04-540b0703e3c9">
+            <useCaseMoniker Id="abdbb2b4-34f2-425e-b1aa-c143dca519af" LastKnownName="Gérer des calques" />
+            <elementDefinition Id="4f9f4583-3e95-47c9-af30-ef2344179d2f" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f4cf6090-5a24-4bcd-a5a4-e31478f57928" name="Manipuler le document" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="30dcb219-307e-4159-8d62-036f034d5a5d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ea8c3ce5-a156-4ba2-81dc-c5381beffacf" name="Enregistrer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="83a60514-5a35-4e60-9ac6-d0325e1ac2ca" />
+        <extendedCases>
+          <extend Id="a851fe59-43ac-4e5f-bddb-cc2b6a9d96b2">
+            <useCaseMoniker Id="f4cf6090-5a24-4bcd-a5a4-e31478f57928" LastKnownName="Manipuler le document" />
+            <elementDefinition Id="eee18269-5502-4488-92be-eb8903da6819" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="3de491f2-7afb-409d-9832-fc0e5e9e7f54" name="Exporter" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="26490eba-8ab3-44da-9479-0eb5bf835a7c" />
+        <extendedCases>
+          <extend Id="82174622-1238-404c-b426-3af36ad86f31">
+            <useCaseMoniker Id="f4cf6090-5a24-4bcd-a5a4-e31478f57928" LastKnownName="Manipuler le document" />
+            <elementDefinition Id="e7e07e22-dfe1-4e91-84a5-571e1eae2371" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9e95d478-f2a0-44ed-9a02-0c8d519b6153" name="Import de PDF" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f69d5c33-ac17-4035-a688-4916e1a48977" />
+        <extendedCases>
+          <extend Id="15fc3766-aadd-4388-823f-70e910df1443">
+            <useCaseMoniker Id="f4cf6090-5a24-4bcd-a5a4-e31478f57928" LastKnownName="Manipuler le document" />
+            <elementDefinition Id="9e4b8741-864b-491f-a33e-9985b9a0ff02" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="128260fe-b533-4820-87db-460c6b1dda1c" name="Répondre aux questions de l'enseignant" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="82778503-0a43-41e9-8e07-337f0c8654a7" />
+        <additions>
+          <include Id="fa6e743b-9964-4367-b2c5-11c3a9a9ada3">
+            <useCaseMoniker Id="67859769-5369-4598-b08a-0cc47baf924b" LastKnownName="Ecrire la réponse" />
+            <elementDefinition Id="972731f6-2b62-4859-a051-2a829c472a57" />
+          </include>
+          <include Id="058787cf-9b35-44a3-8bf2-d54fe7f21b8d">
+            <useCaseMoniker Id="4b85cadc-01d9-45d6-91b6-11882c5642f6" LastKnownName="Envoyer la réponse" />
+            <elementDefinition Id="7fc4d86c-6789-4f87-a06a-982d492eddb5" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="67859769-5369-4598-b08a-0cc47baf924b" name="Ecrire la réponse" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="596e95b2-000b-46a4-986b-afb81ef7f19d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4b85cadc-01d9-45d6-91b6-11882c5642f6" name="Envoyer la réponse" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="19b5bc02-cc91-4dd6-8f5c-29050d2af9f9" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1ef6e6c3-549a-45b5-a8fc-0dd745b92d8c" name="Passer en mode &quot;Ajout de notes&quot;" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="96e54122-7906-4b69-9bbe-540d375c8aa7" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d9cf6029-b1af-414e-b30d-ea84f0553ec3" name="Déplacer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b7b8e4a6-4955-4882-8ef7-91d00a1d7f0b" />
+        <extendedCases>
+          <extend Id="f7992601-a1fc-4b52-933e-3f6059507de9">
+            <useCaseMoniker Id="4ac2d612-63f7-469f-a733-0e65c4a045d3" LastKnownName="Modifier les éléments sur le calque" />
+            <elementDefinition Id="498e0038-8f65-4592-a1b7-d79909f2b6d0" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="82b79d96-4f10-4291-8aaa-b5026b2a4c99" name="NineModeling">
+    <elementDefinition Id="9c5cd0fc-c238-4907-8a9b-30f9bd4ae155" />
+  </package>
+</useCaseModelRoot>

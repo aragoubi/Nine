@@ -1,0 +1,14 @@
+C:\Users\4infop1\Desktop\CAMIA\NineModelsUnitTest\bin\Debug + YSchool\NineModelsUnitTest.dll
+C:\Users\4infop1\Desktop\CAMIA\NineModelsUnitTest\bin\Debug + YSchool\NineModelsUnitTest.pdb
+C:\Users\4infop1\Desktop\CAMIA\NineModelsUnitTest\bin\Debug + YSchool\NineModels.dll
+C:\Users\4infop1\Desktop\CAMIA\NineModelsUnitTest\bin\Debug + YSchool\NineModels.pdb
+C:\Users\4infop1\Desktop\CAMIA\NineModelsUnitTest\obj\Debug + YSchool\NineModelsUnitTest.csprojResolveAssemblyReference.cache
+C:\Users\4infop1\Desktop\CAMIA\NineModelsUnitTest\obj\Debug + YSchool\NineModelsUnitTest.dll
+C:\Users\4infop1\Desktop\CAMIA\NineModelsUnitTest\obj\Debug + YSchool\NineModelsUnitTest.pdb
+C:\Users\aymen\Desktop\CAMIA1\NineModelsUnitTest\bin\Debug + YSchool\NineModelsUnitTest.dll
+C:\Users\aymen\Desktop\CAMIA1\NineModelsUnitTest\bin\Debug + YSchool\NineModelsUnitTest.pdb
+C:\Users\aymen\Desktop\CAMIA1\NineModelsUnitTest\bin\Debug + YSchool\NineModels.dll
+C:\Users\aymen\Desktop\CAMIA1\NineModelsUnitTest\bin\Debug + YSchool\NineModels.pdb
+C:\Users\aymen\Desktop\CAMIA1\NineModelsUnitTest\obj\Debug + YSchool\NineModelsUnitTest.csprojResolveAssemblyReference.cache
+C:\Users\aymen\Desktop\CAMIA1\NineModelsUnitTest\obj\Debug + YSchool\NineModelsUnitTest.dll
+C:\Users\aymen\Desktop\CAMIA1\NineModelsUnitTest\obj\Debug + YSchool\NineModelsUnitTest.pdb

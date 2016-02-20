@@ -1,0 +1,5 @@
+C:\Users\aymen\Desktop\Nine\HeatMap\obj\Debug\HeatMap.csprojResolveAssemblyReference.cache
+C:\Users\aymen\Desktop\Nine\HeatMap\bin\Debug\HeatMap.dll
+C:\Users\aymen\Desktop\Nine\HeatMap\bin\Debug\HeatMap.pdb
+C:\Users\aymen\Desktop\Nine\HeatMap\obj\Debug\HeatMap.dll
+C:\Users\aymen\Desktop\Nine\HeatMap\obj\Debug\HeatMap.pdb

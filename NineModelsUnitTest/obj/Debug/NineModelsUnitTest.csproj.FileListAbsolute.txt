@@ -1,0 +1,16 @@
+D:\Code\csharp\Sources\NineModelsUnitTest\bin\Debug\NineModelsUnitTest.dll
+D:\Code\csharp\Sources\NineModelsUnitTest\bin\Debug\NineModelsUnitTest.pdb
+D:\Code\csharp\Sources\NineModelsUnitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Code\csharp\Sources\NineModelsUnitTest\bin\Debug\NineModels.dll
+D:\Code\csharp\Sources\NineModelsUnitTest\bin\Debug\NineModels.pdb
+D:\Code\csharp\Sources\NineModelsUnitTest\bin\Debug\fr\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+D:\Code\csharp\Sources\NineModelsUnitTest\obj\Debug\NineModelsUnitTest.csprojResolveAssemblyReference.cache
+D:\Code\csharp\Sources\NineModelsUnitTest\obj\Debug\NineModelsUnitTest.dll
+D:\Code\csharp\Sources\NineModelsUnitTest\obj\Debug\NineModelsUnitTest.pdb
+C:\Users\4infop1\Desktop\CAMIA\NineModelsUnitTest\bin\Debug\NineModelsUnitTest.dll
+C:\Users\4infop1\Desktop\CAMIA\NineModelsUnitTest\bin\Debug\NineModelsUnitTest.pdb
+C:\Users\4infop1\Desktop\CAMIA\NineModelsUnitTest\bin\Debug\NineModels.dll
+C:\Users\4infop1\Desktop\CAMIA\NineModelsUnitTest\bin\Debug\NineModels.pdb
+C:\Users\4infop1\Desktop\CAMIA\NineModelsUnitTest\obj\Debug\NineModelsUnitTest.csprojResolveAssemblyReference.cache
+C:\Users\4infop1\Desktop\CAMIA\NineModelsUnitTest\obj\Debug\NineModelsUnitTest.dll
+C:\Users\4infop1\Desktop\CAMIA\NineModelsUnitTest\obj\Debug\NineModelsUnitTest.pdb

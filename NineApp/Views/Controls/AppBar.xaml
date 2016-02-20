@@ -1,0 +1,203 @@
+﻿<UserControl x:Class="Nine.Views.Controls.AppBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:MahApps="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:Controls="clr-namespace:Nine.Views.Controls"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="70" d:DesignWidth="400">
+
+    <UserControl.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#FFF" />
+        </Style>
+        <Style TargetType="Rectangle">
+            <Setter Property="Fill" Value="#FFF" />
+        </Style>
+        <Style TargetType="Button" BasedOn="{StaticResource MetroCircleButtonStyle}">
+            <Setter Property="Width" Value="50" />
+            <Setter Property="Height" Value="50" />
+            <Setter Property="Padding" Value="0" />
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Opacity" Value="0.3" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+
+    <UserControl.Template>
+        <ControlTemplate>
+
+            <!-- Animation triggers -->
+            <ControlTemplate.Triggers>
+                <DataTrigger Binding="{Binding IsOpen}" Value="True">
+
+                    <!-- Openning -->
+                    <DataTrigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Height">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.75" KeySpline="0.25,1,0.05,1" Value="70" />
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.EnterActions>
+
+                    <!-- Closing -->
+                    <DataTrigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Height">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.75" KeySpline="0.25,1,0.05,1" Value="0" />
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.ExitActions>
+
+                </DataTrigger>
+            </ControlTemplate.Triggers>
+
+            <!-- The AppBar -->
+            <Grid
+                x:Name="AppBarContainer"
+                Height="70"
+                Background="{StaticResource FlyoutBackgroundBrush}">
+
+                <WrapPanel
+                    Orientation="Horizontal"
+                    Margin="10 0">
+
+                    <TextBlock
+                        Text="{Binding Tag.CurrentLayer.Name, RelativeSource={RelativeSource AncestorType=UserControl}, FallbackValue='Aucun calque'}"
+                        VerticalAlignment="Center"
+                        MinWidth="60"
+                        MaxWidth="150"
+                        Margin="8 0"
+                        TextWrapping="WrapWithOverflow"
+                        Foreground="White"
+                        FontFamily="Segoe UI"
+                        FontSize="20" />
+
+                    <Rectangle Fill="#777" Width="2" Margin="15" />
+
+                    <!-- Rename the CurrentLayer -->
+                    <WrapPanel Orientation="Vertical" Margin="6 0">
+                        <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center">
+                            <Button >
+                                <Button.Command>
+                                    <Binding Path="Tag.InitiateRenameCurrentLayer"
+                                             RelativeSource="{RelativeSource AncestorType=UserControl}" />
+                                </Button.Command>
+                                <Rectangle Width="26" Height="26">
+                                    <Rectangle.OpacityMask>
+                                        <VisualBrush Stretch="Uniform"
+                                                     Visual="{DynamicResource appbar_interface_textbox}" />
+                                    </Rectangle.OpacityMask>
+                                </Rectangle>
+                            </Button>
+                        </TextBlock>
+                        <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center">Renommer</TextBlock>
+                    </WrapPanel>
+
+                    <!-- Show the CurrentLayer -->
+                    <WrapPanel Orientation="Vertical" Margin="6 0"
+                               Visibility="{Binding Tag.CurrentLayer.IsDisplayed, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={StaticResource BooleanToVisibility}, ConverterParameter=ReverseVisibility, FallbackValue=Collapsed}">
+                        <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center">
+                            <Button>
+                                <Button.Command>
+                                    <Binding Path="Tag.ShowCurrentLayer"
+                                             RelativeSource="{RelativeSource AncestorType={x:Type UserControl}}" />
+                                </Button.Command>
+                                <Rectangle Width="22" Height="22">
+                                    <Rectangle.OpacityMask>
+                                        <VisualBrush Stretch="Uniform" Visual="{DynamicResource appbar_eye}" />
+                                    </Rectangle.OpacityMask>
+                                </Rectangle>
+                            </Button>
+                        </TextBlock>
+                        <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center">Afficher</TextBlock>
+                    </WrapPanel>
+
+                    <!-- Hide the CurrentLayer -->
+                    <WrapPanel Orientation="Vertical" Margin="6 0"
+                               Visibility="{Binding Tag.CurrentLayer.IsDisplayed, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={StaticResource BooleanToVisibility}}">
+                        <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center">
+                            <Button>
+                                <Button.Command>
+                                    <Binding Path="Tag.HideCurrentLayer"
+                                             RelativeSource="{RelativeSource AncestorType=UserControl}" />
+                                </Button.Command>
+                                <Rectangle Width="28" Height="28">
+                                    <Rectangle.OpacityMask>
+                                        <VisualBrush Stretch="Uniform" Visual="{DynamicResource appbar_eye_hide}" />
+                                    </Rectangle.OpacityMask>
+                                </Rectangle>
+                            </Button>
+                        </TextBlock>
+                        <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center">Masquer</TextBlock>
+                    </WrapPanel>
+
+                    <!-- Share the CurrentLayer -->
+                    <WrapPanel Orientation="Vertical" Margin="6 0">
+                        <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center">
+                            <Button>
+                                <Button.Command>
+                                    <Binding Path="Tag.ShareCurrentLayer"
+                                             RelativeSource="{RelativeSource AncestorType=UserControl}" />
+                                </Button.Command>
+                                <Rectangle Width="25" Height="25">
+                                    <Rectangle.OpacityMask>
+                                        <VisualBrush Stretch="Uniform" Visual="{DynamicResource appbar_share}" />
+                                    </Rectangle.OpacityMask>
+                                </Rectangle>
+                            </Button>
+                        </TextBlock>
+                        <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center">Partager</TextBlock>
+                    </WrapPanel>
+
+                    <!-- Delete the CurrentLayer -->
+                    <WrapPanel Orientation="Vertical" Margin="6 0">
+                        <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center">
+                            <Button>
+                                <Button.Command>
+                                    <Binding Path="Tag.DeleteCurrentLayer"
+                                             RelativeSource="{RelativeSource AncestorType=UserControl}" />
+                                </Button.Command>
+                                <Rectangle Width="22" Height="22">
+                                    <Rectangle.OpacityMask>
+                                        <VisualBrush Stretch="Uniform" Visual="{DynamicResource appbar_delete}" />
+                                    </Rectangle.OpacityMask>
+                                </Rectangle>
+                            </Button>
+                        </TextBlock>
+                        <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center">Supprimer</TextBlock>
+                    </WrapPanel>
+
+                    <!-- Response to the teacher -->
+                    <WrapPanel Orientation="Vertical" Margin="6 0"
+                               Visibility="{Binding Tag.LessonViewModel.CanAnswer, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={StaticResource BooleanToVisibility}}">
+                        <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center">
+                            <Button>
+                                <Button.Command>
+                                    <Binding Path="Tag.LessonViewModel.SubmitAnswer"
+                                             RelativeSource="{RelativeSource AncestorType=UserControl}" />
+                                </Button.Command>
+                                <Rectangle Width="25" Height="25">
+                                    <Rectangle.OpacityMask>
+                                        <VisualBrush Stretch="Uniform" Visual="{DynamicResource appbar_upload}" />
+                                    </Rectangle.OpacityMask>
+                                </Rectangle>
+                            </Button>
+                        </TextBlock>
+                        <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center">Soumettre</TextBlock>
+                    </WrapPanel>
+                </WrapPanel>
+
+            </Grid>
+
+        </ControlTemplate>
+    </UserControl.Template>
+
+</UserControl>

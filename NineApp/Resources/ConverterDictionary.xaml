@@ -1,0 +1,19 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:Converters="clr-namespace:Nine.Converters">
+
+    <Converters:DebugConverter x:Key="DebugConverter" />
+    <Converters:ItemsEqualToBoolean x:Key="ItemsEqualToBoolean" />
+    <Converters:ItemsEqualToInt x:Key="ItemsEqualToInt" />
+    <Converters:ItemsEqualToStyle x:Key="ItemsEqualToStyle" />
+    <Converters:LayersEqualToStyle x:Key="LayersEqualToStyle" />
+    <Converters:ItemsEqualToPageIndex x:Key="ItemsEqualToPageIndex" />
+    <Converters:ItemsEqualToVisibility x:Key="ItemsEqualToVisibility" />
+    <Converters:ToStrokeCollection x:Key="ToStrokeCollection" />
+    <Converters:BooleanToVisibility x:Key="BooleanToVisibility" />
+    <Converters:StringToResource x:Key="StringToResource" />
+    <Converters:ExerciceKindToThumbStyle x:Key="ExerciceKindToThumbStyle" />
+    <Converters:BooleanToRoleStyle x:Key="BooleanToRoleStyle" />
+    <Converters:WindowStateToBoolean x:Key="WindowStateToBoolean" />
+
+</ResourceDictionary>

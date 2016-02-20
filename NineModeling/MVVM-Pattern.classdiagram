@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="a263d69f-5693-4332-ab98-6071dd9def51" name="MVVM-Pattern" linkedPackageId="09bec2a0-ec54-43b0-a706-9bd0de089c2a" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="364cc4a0-5b6e-4863-967a-48e9544f862f" name="NotifyPropertyChanged" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="cce6a230-2bee-46f5-8641-5fe9e3c623fd" />
+        <suppliersInternal>
+          <dependency Id="ec24af3c-57f8-408f-b5c5-2933b330d7ca">
+            <interfaceMoniker Id="0e4d38e1-6517-4944-b645-59f16a025718" LastKnownName="INotifyPropertyChanged" />
+            <elementDefinition Id="ca541dad-79e4-421d-836f-a217962f84a1" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="2f5fc839-967e-4427-b099-4b42446322d6" name="PropertyChangedEventHandler PropertyChanged" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a50883c0-ffb7-4ed3-9937-3df39d944f57" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="4fa4840d-2428-43a3-8652-e2695bf45bc6" name="RaisePropertyChanged" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2b10fa88-aa07-4e71-81c3-802af0758bb7" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="df68b743-fb22-4d9c-bc90-7df02a1d0e6f" name="String propertyName" direction="In" isUnique="false">
+                  <elementDefinition Id="b3ce11e9-97e1-4563-b17a-3fe90b78f09e" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="0e4d38e1-6517-4944-b645-59f16a025718" name="INotifyPropertyChanged" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9ee27e3d-dcfb-4ceb-a08e-ee14eb6ac7c0" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="18966e5e-fd0e-4985-b3d0-cdd22f988c4a" name="Model" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9ecd566f-f07e-4347-93f9-f3bc0dada3de" />
+        <generalsInternal>
+          <generalization Id="68749420-3d0e-4074-a7c3-2a60045448b2" isSubstitutable="false">
+            <classMoniker Id="364cc4a0-5b6e-4863-967a-48e9544f862f" LastKnownName="NotifyPropertyChanged" />
+            <elementDefinition Id="7314c760-108a-42e1-b45f-63104456e712" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="9caf0348-4968-46df-ad90-4a1d8ff81c45" name="ViewModel" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a8131a50-0ce3-4e27-b03c-4c693e9de93b" />
+        <generalsInternal>
+          <generalization Id="32bf8675-bd26-47de-9b50-ea0c0ec7bc20" isSubstitutable="false">
+            <classMoniker Id="364cc4a0-5b6e-4863-967a-48e9544f862f" LastKnownName="NotifyPropertyChanged" />
+            <elementDefinition Id="8001ea80-004b-4dea-b273-2036b7875499" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="a95c5f7f-03cf-470c-a86b-0746afec1c88" isDerived="false" sourceEndRoleName="" targetEndRoleName="Model" isLeaf="false" isAbstract="false">
+            <classMoniker Id="18966e5e-fd0e-4985-b3d0-cdd22f988c4a" LastKnownName="Model" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2b70a252-927b-44ad-ac50-a6eead8a8653" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="be047b73-4e0b-4bcb-98b9-8613d49af2ac" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e331c5e6-1ac1-4323-befe-0ccf28ec9faf" name="Model" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0ba50d0c-cc63-47dd-9a49-51d97b952b72" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="81b162db-3616-422e-87d6-37377d7eb838" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4d981a03-34f7-4f70-845c-5d8ad194045c" name="View" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="58e66cc7-52a8-48b2-a42d-e072228eb558" />
+        <targetEnds>
+          <association Id="8f955710-1d4c-4cd6-915d-82d2e1df4147" isDerived="false" sourceEndRoleName="" targetEndRoleName="DataContext" isLeaf="false" isAbstract="false">
+            <classMoniker Id="9caf0348-4968-46df-ad90-4a1d8ff81c45" LastKnownName="ViewModel" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4cbf7d60-75d1-4b17-ab96-ce12a33d807f" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="326d8586-47cc-4f7d-b8a4-66aeff39f4a1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5d9f827c-5ac2-4c2d-8403-d84685edc6f2" name="DataContext" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="868c7689-248b-40da-8dd5-1b9ac628c489" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="61206e06-99c6-4fb7-a94e-e121c2d43f12" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="09bec2a0-ec54-43b0-a706-9bd0de089c2a" name="NineModeling">
+    <elementDefinition Id="9c5cd0fc-c238-4907-8a9b-30f9bd4ae155" />
+  </package>
+</logicalClassDesignerModel>

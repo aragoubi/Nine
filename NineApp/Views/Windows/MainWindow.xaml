@@ -1,0 +1,153 @@
+﻿<MahApps:MetroWindow
+    x:Class="Nine.Views.Windows.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:MahApps="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+    xmlns:Controls="clr-namespace:Nine.Views.Controls"
+    Icon="/Resources/NineRedFavicon.ico"
+    Title="NINE - New Interactions, New Educations"
+    EnableDWMDropShadow="True"
+    WindowTransitionsEnabled="False"
+    WindowStartupLocation="CenterScreen"
+    WindowState="Normal"
+    MinHeight="450" MinWidth="600"
+    IgnoreTaskbarOnMaximize="True"
+    ShowTitleBar="{Binding WindowState, RelativeSource={RelativeSource Self}, Converter={StaticResource WindowStateToBoolean}, ConverterParameter=Normal}"
+    Height="700" Width="1300">
+    <!-- Disable WindowTransitions if there is an <InkCanvas> on the StartUp Page (causes issue when inking) -->
+
+    <MahApps:MetroWindow.IconTemplate>
+        <DataTemplate>
+            <Grid Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" Background="Transparent"
+                  RenderOptions.EdgeMode="Aliased" RenderOptions.BitmapScalingMode="HighQuality">
+                <Image Source="/Resources/NineWhiteMarginFavicon.ico" />
+            </Grid>
+        </DataTemplate>
+    </MahApps:MetroWindow.IconTemplate>
+
+    <MahApps:MetroWindow.Flyouts>
+        <MahApps:FlyoutsControl>
+            <MahApps:Flyout x:Name="GeneralFlyoutMenu" Header="" Position="Left" Width="180" IsPinned="False">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" HorizontalAlignment="Stretch" x:Name="FlyoutContainer">
+                        <StackPanel.Resources>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Margin" Value="10,10,0,0" />
+                            </Style>
+                        </StackPanel.Resources>
+
+                        <Controls:UserFlyoutControl />
+
+                        <!--<Border BorderBrush="LightGray" BorderThickness="1" Margin="15 5"/>-->
+                        <Separator BorderBrush="White" Margin="15 5" />
+
+                        <Button Content="Ouvrir" Style="{DynamicResource FlyoutButtonStyle}"
+                                Command="{Binding OpenFile}">
+                            <Button.Tag>
+                                <VisualBrush Visual="{StaticResource appbar_folder}" Stretch="Fill" />
+                            </Button.Tag>
+                        </Button>
+                        <Button Content="Enregistrer" Style="{DynamicResource FlyoutButtonStyle}"
+                                Command="{Binding SaveFile}">
+                            <Button.Tag>
+                                <VisualBrush Visual="{StaticResource appbar_save}" Stretch="Fill" />
+                            </Button.Tag>
+                        </Button>
+                        <Button Content="Partager leçon" Style="{DynamicResource FlyoutButtonStyle}"
+                                Command="{Binding ShareLesson}">
+                            <Button.Tag>
+                                <VisualBrush Visual="{StaticResource appbar_share}" Stretch="Fill" />
+                            </Button.Tag>
+                        </Button>
+                        <Button Content="Fermer" Style="{DynamicResource FlyoutButtonStyle}"
+                                Command="{Binding CloseFile}">
+                            <Button.Tag>
+                                <VisualBrush Visual="{StaticResource appbar_undo}" Stretch="Fill" />
+                            </Button.Tag>
+                        </Button>
+                        <Button Content="Quitter" Style="{DynamicResource FlyoutButtonStyle}"
+                                Command="{Binding MainWindowClose}">
+                            <Button.Tag>
+                                <VisualBrush Visual="{StaticResource appbar_close}" Stretch="Fill" />
+                            </Button.Tag>
+                        </Button>
+
+                    </StackPanel>
+                    <Button Grid.Row="2" Content="À propos de Nine" Style="{DynamicResource FlyoutButtonStyle}"
+                            Command="{Binding AboutClick}">
+                        <Button.Tag>
+                            <VisualBrush Visual="{StaticResource appbar_quote_right}" Stretch="Fill" />
+                        </Button.Tag>
+                    </Button>
+                </Grid>
+            </MahApps:Flyout>
+
+
+            <!--LessonBar-->
+            <MahApps:Flyout x:Name="LessonFlyoutMenu"
+                            Position="Bottom"
+                            IsPinned="False">
+                <StackPanel HorizontalAlignment="Stretch" Orientation="Horizontal">
+
+                    <!--Rename-->
+                    <WrapPanel Orientation="Vertical" Margin="6 0 0 6">
+                        <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center" Foreground="#FFF">
+                            <Button Command="{Binding RenameLesson}"
+                                    Style="{StaticResource MetroCircleButtonStyle}"
+                                    Width="50" Height="50" Padding="0">
+                                <Rectangle Width="26" Height="26" Fill="#FFF">
+                                    <Rectangle.OpacityMask>
+                                        <VisualBrush Stretch="Uniform"
+                                                     Visual="{DynamicResource appbar_interface_textbox}" />
+                                    </Rectangle.OpacityMask>
+                                </Rectangle>
+                            </Button>
+                        </TextBlock>
+                        <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center">Renommer</TextBlock>
+                    </WrapPanel>
+
+                    <!--Share-->
+                    <WrapPanel Orientation="Vertical" Margin="6 0 0 6">
+                        <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center" Foreground="#FFF">
+                            <Button Command="{Binding ShareLesson}"
+                                    Style="{StaticResource MetroCircleButtonStyle}"
+                                    Width="50" Height="50" Padding="0">
+                                <Rectangle Width="22" Height="22" Fill="#FFF">
+                                    <Rectangle.OpacityMask>
+                                        <VisualBrush Stretch="Uniform" Visual="{DynamicResource appbar_share}" />
+                                    </Rectangle.OpacityMask>
+                                </Rectangle>
+                            </Button>
+                        </TextBlock>
+                        <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center">Partager</TextBlock>
+                    </WrapPanel>
+
+                    <!--Delete-->
+                    <WrapPanel Orientation="Vertical" Margin="6 0 0 6">
+                        <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center" Foreground="#FFF">
+                            <Button Command="{Binding DeleteLesson}"
+                                    Style="{StaticResource MetroCircleButtonStyle}"
+                                    Width="50" Height="50" Padding="0">
+                                <Rectangle Width="22" Height="22" Fill="#FFF">
+                                    <Rectangle.OpacityMask>
+                                        <VisualBrush Stretch="Uniform" Visual="{DynamicResource appbar_delete}" />
+                                    </Rectangle.OpacityMask>
+                                </Rectangle>
+                            </Button>
+                        </TextBlock>
+                        <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center">Supprimer</TextBlock>
+                    </WrapPanel>
+                </StackPanel>
+            </MahApps:Flyout>
+
+            <Controls:ShareFlyout IsModal="True" />
+
+        </MahApps:FlyoutsControl>
+    </MahApps:MetroWindow.Flyouts>
+
+</MahApps:MetroWindow>

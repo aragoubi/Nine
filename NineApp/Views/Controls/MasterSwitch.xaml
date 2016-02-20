@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="Nine.Views.Controls.MasterSwitch"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="50" d:DesignWidth="150"
+             Loaded="MasterSwitch_Loaded">
+
+    <StackPanel Orientation="Horizontal">
+
+        <Button
+            Width="50"
+            Height="50"
+            HorizontalAlignment="Center"
+            Command="{Binding ChangePageCommand}"
+            CommandParameter="MainPage">
+
+            <Button.Style>
+                <MultiBinding Converter="{StaticResource ItemsEqualToStyle}" ConverterParameter="MasterSwitch">
+                    <Binding Path="CurrentPage" />
+                    <Binding Path="CommandParameter" RelativeSource="{RelativeSource Self}" />
+                </MultiBinding>
+            </Button.Style>
+
+            <Rectangle
+                Margin="0 3 0 0"
+                Width="23"
+                Height="23"
+                Fill="{Binding Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType=Button}}">
+                <Rectangle.OpacityMask>
+                    <VisualBrush Stretch="Uniform" Visual="{DynamicResource appbar_projector_screen}" />
+                </Rectangle.OpacityMask>
+            </Rectangle>
+
+        </Button>
+
+        <Button
+            Width="50"
+            Height="50"
+            HorizontalAlignment="Center"
+            Command="{Binding ChangePageCommand}"
+            CommandParameter="FreeNotesPage">
+
+            <Button.Style>
+                <MultiBinding Converter="{StaticResource ItemsEqualToStyle}" ConverterParameter="MasterSwitch">
+                    <Binding Path="CurrentPage" />
+                    <Binding Path="CommandParameter" RelativeSource="{RelativeSource Self}" />
+                </MultiBinding>
+            </Button.Style>
+
+            <Rectangle
+                Width="23"
+                Height="23"
+                Fill="{Binding Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType=Button}}">
+                <Rectangle.OpacityMask>
+                    <VisualBrush Stretch="Uniform" Visual="{DynamicResource appbar_paper}" />
+                </Rectangle.OpacityMask>
+            </Rectangle>
+
+        </Button>
+
+        <Button
+            Width="50"
+            Height="50"
+            HorizontalAlignment="Center"
+            Command="{Binding ChangePageCommand}"
+            CommandParameter="QuestionsPage">
+
+            <Button.Style>
+                <MultiBinding Converter="{StaticResource ItemsEqualToStyle}" ConverterParameter="MasterSwitch">
+                    <Binding Path="CurrentPage" />
+                    <Binding Path="CommandParameter" RelativeSource="{RelativeSource Self}" />
+                </MultiBinding>
+            </Button.Style>
+
+            <Rectangle
+                Width="25"
+                Height="25"
+                Fill="{Binding Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType=Button}}">
+                <Rectangle.OpacityMask>
+                    <VisualBrush Stretch="Uniform" Visual="{DynamicResource appbar_checkmark_pencil}" />
+                </Rectangle.OpacityMask>
+            </Rectangle>
+
+        </Button>
+
+    </StackPanel>
+
+</UserControl>

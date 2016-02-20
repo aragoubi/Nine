@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="GestionEncre">
+  <logicalClassDesignerModelMoniker Id="c0fef95d-59b9-4c8e-8605-5c32f648b0ee" />
+  <nestedChildShapes>
+    <classShape Id="901327bd-ef61-4fe3-863f-bb030389ec9c" absoluteBounds="4.25, 1.5, 1.5, 0.90234373509883881" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+      <classMoniker Id="6bff4e48-aaeb-4a72-952e-66b5f7594b3e" LastKnownName="XamlInkRenderer" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="1e75665b-9e37-40f9-a43f-8a952174c7ac" absoluteBounds="4.265, 1.8900000000000001, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="1692a20a-67ba-4022-bc7c-da266a8e2146" absoluteBounds="4.265, 2.1011718675494193, 1.4700000000000002, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>

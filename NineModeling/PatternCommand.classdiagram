@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="37b4d6b5-443e-4202-b583-28014bd66223" name="PatternCommand" linkedPackageId="9ce03c63-fdf9-45e5-86ef-ddcb56a72b84" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="f2eb8ae0-7297-4041-b2b7-f729e1fd27bc" name="ICommand" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2877d28d-9ef9-4ef9-b85d-76eb0afa823e" />
+        <ownedOperations>
+          <operation Id="f52526ac-4389-4ce2-8346-2ec2dd6e5abe" name="execute" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b7858a76-4058-4729-8d7d-e82a7213aab8" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5898c6ce-6cf5-4147-bf59-16cc9960b4b3" name="Command" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="82b5918a-0ab5-449f-b126-fa3d8c203d5c" />
+        <suppliersInternal>
+          <interfaceRealization Id="da5eb161-4e52-4839-acc8-6c4c51be534d">
+            <interfaceMoniker Id="f2eb8ae0-7297-4041-b2b7-f729e1fd27bc" LastKnownName="ICommand" />
+            <elementDefinition Id="66f69726-1eb2-428a-96e2-81f228e05fa6" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="6f56ba79-911e-4fb4-a5d3-d4b111a5fd23" name="execute" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0a9c827d-9b4e-41b2-9dbc-1ebcd505e0b1" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="998606dd-3a68-43a3-93a4-00e14119806f" name="StrokeCommand" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="724ff124-2ea1-4cfe-a90c-cb570377efeb" />
+        <generalsInternal>
+          <generalization Id="53b09ab2-53bf-4451-b60c-593593a0066d" isSubstitutable="false">
+            <classMoniker Id="5898c6ce-6cf5-4147-bf59-16cc9960b4b3" LastKnownName="Command" />
+            <elementDefinition Id="4da23c42-404f-4308-ae72-9a43d4a5f081" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="24ca5645-f75c-446c-8248-dfb8f1a54619" name="canvas" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="99b1d42a-088b-4a13-809d-95ddbf664823" />
+          </property>
+          <property Id="0c3ad2bf-cbf3-486e-9794-ebe5617c61bf" name="stroke" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b0bce50a-3567-4b3e-be6d-cac5026fa188" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="84287540-87c9-4720-b578-af9c35df75dd" name="draw" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="abbb5a9a-f65c-4353-b5a4-5ad87f34c6e8" />
+          </operation>
+          <operation Id="b549e3f6-5b72-447c-9f27-d6998985eab9" name="StrokeCommand" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a1338f16-7d66-44a4-aec9-dbb1b6f375d0" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="355a5aff-0584-4890-9645-ec67d40b9b14" name="HighlighStroke" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="895193ff-864f-4eff-829b-61a5d3556759" />
+        <generalsInternal>
+          <generalization Id="87e6c3cf-70a7-4981-9e9f-ad642beab754" isSubstitutable="false">
+            <classMoniker Id="998606dd-3a68-43a3-93a4-00e14119806f" LastKnownName="StrokeCommand" />
+            <elementDefinition Id="af012c65-127e-4ed8-b068-b9772c111804" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="ec38d3a8-ee98-44df-8578-8d80c6ea87c6" name="execute" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="26d7c0fd-6179-4e66-af22-2131de0c7e90" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="fb7c6156-37cd-4914-ae12-e09e6cc3b008" name="Stroke" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="64f4014a-dae2-4bc7-986f-502e32d0cbed" />
+        <generalsInternal>
+          <generalization Id="9448401a-449d-4dc2-9f7f-21e46692fd44" isSubstitutable="false">
+            <classMoniker Id="998606dd-3a68-43a3-93a4-00e14119806f" LastKnownName="StrokeCommand" />
+            <elementDefinition Id="daf225a8-8592-4013-a6bb-10b674e4dea2" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="b2ba41f1-7620-4477-84ad-d29509d66182" name="execute" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2ab0058c-3c35-407d-afbf-a97c360bf05b" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="9ce03c63-fdf9-45e5-86ef-ddcb56a72b84" name="NineModeling">
+    <elementDefinition Id="9c5cd0fc-c238-4907-8a9b-30f9bd4ae155" />
+  </package>
+</logicalClassDesignerModel>

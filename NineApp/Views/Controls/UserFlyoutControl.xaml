@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="Nine.Views.Controls.UserFlyoutControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="100" d:DesignWidth="180">
+    <Grid Background="Transparent" Margin="5,0,5,15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Rectangle Grid.Column="0" Fill="White" Margin="5 0" Width="30" Height="30">
+            <Rectangle.Style>
+                <Style TargetType="Rectangle">
+                    <Setter Property="OpacityMask">
+                        <Setter.Value>
+                            <VisualBrush Visual="{StaticResource student_icon}" Stretch="Uniform" />
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding User.IsTeacher}" Value="True">
+                            <Setter Property="OpacityMask">
+                                <Setter.Value>
+                                    <VisualBrush Visual="{StaticResource teacher_icon}" Stretch="Uniform" />
+                                </Setter.Value>
+                            </Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Rectangle.Style>
+        </Rectangle>
+        <Grid Grid.Column="1">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                <TextBlock TextWrapping="WrapWithOverflow" Foreground="White" FontFamily="Segoe UI" FontSize="20"
+                           Text="{Binding User.CompleteName}" />
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</UserControl>

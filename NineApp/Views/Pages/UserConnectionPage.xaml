@@ -1,0 +1,61 @@
+﻿<Page x:Class="Nine.Views.Pages.UserConnectionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:Controls="clr-namespace:Nine.Views.Controls"
+      xmlns:MahApps="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro">
+
+    <Grid Background="#F9F9F9">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+
+        <ContentControl Content="{StaticResource NineLogo}" Grid.Column="0" />
+
+        <ScrollViewer Visibility="{Binding IsNotBusy, Converter={StaticResource BooleanToVisibility}}"
+                      HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1"
+                      PanningMode="VerticalFirst" VerticalScrollBarVisibility="Auto" PanningDeceleration="0.001">
+
+            <!-- All the Layer Selection (one Button for each Layer) -->
+            <ItemsControl ItemsSource="{Binding Users}" Tag="{Binding}" FocusVisualStyle="{x:Null}">
+
+                <!-- Container of all the Buttons -->
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+
+                        <!-- Using a StackPanel, to stack them next to each other -->
+                        <StackPanel Orientation="Vertical" />
+
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+
+                <!-- Template of one of the Button -->
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Button
+                            Style="{Binding Value.IsTeacher, Converter={StaticResource BooleanToRoleStyle}, ConverterParameter=TileAuthenticate}"
+                            CommandParameter="{Binding Key}" Width="250" Height="60"
+                            Content="{Binding Value.FirstName}" Margin="0 7" Tag="{Binding Value.IsTeacher}">
+                            <Button.Command>
+                                <Binding Path="Tag.Connection"
+                                         RelativeSource="{RelativeSource AncestorType={x:Type ItemsControl}}" />
+                            </Button.Command>
+                        </Button>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
+        <StackPanel Visibility="{Binding IsBusy, Converter={StaticResource BooleanToVisibility}}"
+                    HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1">
+            <TextBlock FontFamily="Segoe UI Light" FontSize="28" Text="Connexion en cours" />
+            <MahApps:ProgressRing IsActive="{Binding IsBusy}"
+                                  Foreground="#ED3423"
+                                  Margin="0 20 0 0" />
+        </StackPanel>
+
+    </Grid>
+</Page>
